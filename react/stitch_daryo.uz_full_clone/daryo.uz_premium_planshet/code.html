@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+
+<html class="light" lang="uz"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Daryo Premium Subscription</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&amp;family=Work+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "background": "#f8f9fa",
+                    "on-error-container": "#93000a",
+                    "error-container": "#ffdad6",
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary-container": "#7f3700",
+                    "on-tertiary-fixed-variant": "#763300",
+                    "tertiary-fixed": "#ffdbca",
+                    "surface-bright": "#f8f9fa",
+                    "secondary-fixed-dim": "#b5c7e9",
+                    "inverse-surface": "#2e3132",
+                    "on-primary-container": "#96beff",
+                    "surface": "#f8f9fa",
+                    "error": "#ba1a1a",
+                    "primary": "#003569",
+                    "on-secondary-fixed-variant": "#364763",
+                    "tertiary": "#5c2600",
+                    "on-surface": "#191c1d",
+                    "surface-container-low": "#f3f4f5",
+                    "surface-container-high": "#e7e8e9",
+                    "on-secondary-fixed": "#071c35",
+                    "secondary": "#4e5f7c",
+                    "primary-fixed-dim": "#a7c8ff",
+                    "inverse-on-surface": "#f0f1f2",
+                    "outline": "#727782",
+                    "on-surface-variant": "#424751",
+                    "on-tertiary": "#ffffff",
+                    "surface-container": "#edeeef",
+                    "secondary-container": "#c9dbfd",
+                    "on-primary-fixed": "#001c3b",
+                    "on-primary": "#ffffff",
+                    "tertiary-fixed-dim": "#ffb68e",
+                    "on-tertiary-container": "#ffa877",
+                    "secondary-fixed": "#d5e3ff",
+                    "on-error": "#ffffff",
+                    "on-background": "#191c1d",
+                    "surface-container-highest": "#e1e3e4",
+                    "outline-variant": "#c2c6d2",
+                    "on-primary-fixed-variant": "#004788",
+                    "inverse-primary": "#a7c8ff",
+                    "surface-variant": "#e1e3e4",
+                    "on-secondary-container": "#4e607d",
+                    "on-secondary": "#ffffff",
+                    "primary-fixed": "#d5e3ff",
+                    "surface-dim": "#d9dadb",
+                    "surface-tint": "#255fa5",
+                    "on-tertiary-fixed": "#331200",
+                    "primary-container": "#004c91"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Inter"],
+                    "body": ["Inter"],
+                    "label": ["Work Sans"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- TopNavBar (Shared Component Execution) -->
+<header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl bg-surface-container-low dark:bg-slate-800/50">
+<div class="flex justify-between items-center h-16 px-6 lg:px-12 w-full mx-auto max-w-full">
+<div class="flex items-center gap-6">
+<span class="text-2xl font-black italic tracking-tighter text-[#004C91] dark:text-white">Daryo</span>
+<nav class="hidden md:flex items-center gap-6">
+<a class="font-inter tracking-tight font-bold text-slate-600 dark:text-slate-400 hover:text-on-surface dark:hover:text-white transition-colors" href="#">Politics</a>
+<a class="font-inter tracking-tight font-bold text-slate-600 dark:text-slate-400 hover:text-on-surface dark:hover:text-white transition-colors" href="#">Economy</a>
+<a class="font-inter tracking-tight font-bold text-slate-600 dark:text-slate-400 hover:text-on-surface dark:hover:text-white transition-colors" href="#">Society</a>
+<a class="font-inter tracking-tight font-bold text-slate-600 dark:text-slate-400 hover:text-on-surface dark:hover:text-white transition-colors" href="#">World</a>
+</nav>
+</div>
+<div class="flex items-center gap-2">
+<button class="p-2 hover:bg-slate-100/50 dark:hover:bg-slate-800/50 rounded-lg transition-all scale-95 active:opacity-80">
+<span class="material-symbols-outlined text-[#004C91]" data-icon="search">search</span>
+</button>
+<button class="p-2 hover:bg-slate-100/50 dark:hover:bg-slate-800/50 rounded-lg transition-all scale-95 active:opacity-80">
+<span class="material-symbols-outlined text-[#004C91]" data-icon="menu">menu</span>
+</button>
+</div>
+</div>
+</header>
+<main class="pt-24 pb-32 px-6 md:px-12 max-w-5xl mx-auto">
+<!-- Hero Section -->
+<section class="mb-12 text-center">
+<h1 class="text-4xl md:text-5xl font-black tracking-tighter text-on-surface mb-4">Daryo Premium</h1>
+<p class="text-on-surface-variant text-lg max-w-2xl mx-auto">Xabarlarni reklamasiz o'qing, eksklyuziv tahliliy maqolalardan bahramand bo'ling va eng birinchilardan bo'lib insaydlarga ega bo'ling.</p>
+</section>
+<!-- Bento Grid Benefits -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-16">
+<div class="md:col-span-2 bg-surface-container-low rounded-xl p-8 flex flex-col justify-between">
+<div>
+<span class="material-symbols-outlined text-primary text-4xl mb-4" data-icon="block">block</span>
+<h3 class="text-2xl font-bold mb-2">Reklamasiz mutolaa</h3>
+<p class="text-on-surface-variant">Hech qanday chalg'ituvchi bannerlarsiz faqat muhim xabarlarga e'tibor qarating.</p>
+</div>
+<div class="mt-8 flex gap-2">
+<div class="h-1 w-12 bg-primary rounded-full"></div>
+<div class="h-1 w-4 bg-outline-variant rounded-full"></div>
+<div class="h-1 w-4 bg-outline-variant rounded-full"></div>
+</div>
+</div>
+<div class="bg-primary-container text-white rounded-xl p-8 flex flex-col items-center justify-center text-center">
+<span class="material-symbols-outlined text-5xl mb-4" data-icon="verified_user" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+<h3 class="text-xl font-bold mb-2">Eksklyuziv tarkib</h3>
+<p class="text-on-primary-container text-sm">Faqat premium obunachilar uchun yopiq tahliliy materiallar.</p>
+</div>
+<div class="bg-surface-container-highest rounded-xl p-8">
+<span class="material-symbols-outlined text-primary mb-4" data-icon="speed">speed</span>
+<h3 class="text-lg font-bold mb-1">Tezkor yuklanish</h3>
+<p class="text-on-surface-variant text-sm">Ilova va sayt 2 barobar tezroq ishlaydi.</p>
+</div>
+<div class="bg-surface-container-highest rounded-xl p-8">
+<span class="material-symbols-outlined text-primary mb-4" data-icon="article">article</span>
+<h3 class="text-lg font-bold mb-1">PDF arxiv</h3>
+<p class="text-on-surface-variant text-sm">Barcha muhim sonlarni PDF formatda saqlab oling.</p>
+</div>
+<div class="bg-surface-container-highest rounded-xl p-8">
+<span class="material-symbols-outlined text-primary mb-4" data-icon="devices">devices</span>
+<h3 class="text-lg font-bold mb-1">5 ta qurilma</h3>
+<p class="text-on-surface-variant text-sm">Bir vaqtning o'zida bir nechta qurilmadan foydalaning.</p>
+</div>
+</section>
+<!-- Pricing Section (Tablet Optimization: 3 Columns) -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-20">
+<!-- 1 Month -->
+<div class="bg-surface-container-lowest border border-outline-variant/20 rounded-2xl p-8 flex flex-col justify-between transition-transform hover:scale-[1.02]">
+<div>
+<h4 class="font-label font-semibold text-sm uppercase tracking-widest text-on-surface-variant mb-6">Standard</h4>
+<div class="flex items-baseline gap-1 mb-8">
+<span class="text-4xl font-black">15 000</span>
+<span class="text-on-surface-variant">so'm/oy</span>
+</div>
+<ul class="space-y-4 mb-8">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-sm">Reklamasiz interfeys</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-sm">Barcha maqolalar</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-outline-variant text-sm" data-icon="cancel">cancel</span>
+<span class="text-sm text-on-surface-variant">Oila a'zolari uchun</span>
+</li>
+</ul>
+</div>
+<button class="w-full py-4 bg-surface-container-high text-on-surface font-bold rounded-xl active:scale-95 transition-transform">Tanlash</button>
+</div>
+<!-- 1 Year - Popular -->
+<div class="relative bg-surface-container-lowest border-2 border-primary rounded-2xl p-8 flex flex-col justify-between transition-transform hover:scale-[1.02] shadow-xl">
+<div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-tighter">Eng ommabop</div>
+<div>
+<h4 class="font-label font-semibold text-sm uppercase tracking-widest text-primary mb-6">Premium Yillik</h4>
+<div class="flex items-baseline gap-1 mb-2">
+<span class="text-4xl font-black">120 000</span>
+<span class="text-on-surface-variant">so'm/yil</span>
+</div>
+<p class="text-primary text-sm font-bold mb-8">-35% iqtisod qiling</p>
+<ul class="space-y-4 mb-8">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-sm">Barcha premium imkoniyatlar</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-sm">PDF arxivga kirish</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-sm">Prioritetli qo'llab-quvvatlash</span>
+</li>
+</ul>
+</div>
+<button class="w-full py-4 bg-gradient-to-r from-primary to-primary-container text-white font-bold rounded-xl active:scale-95 transition-transform">Obuna bo'lish</button>
+</div>
+<!-- Family Plan -->
+<div class="bg-surface-container-lowest border border-outline-variant/20 rounded-2xl p-8 flex flex-col justify-between transition-transform hover:scale-[1.02]">
+<div>
+<h4 class="font-label font-semibold text-sm uppercase tracking-widest text-on-surface-variant mb-6">Oila uchun</h4>
+<div class="flex items-baseline gap-1 mb-8">
+<span class="text-4xl font-black">45 000</span>
+<span class="text-on-surface-variant">so'm/oy</span>
+</div>
+<ul class="space-y-4 mb-8">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-sm">5 tagacha foydalanuvchi</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-sm">Mustaqil profillar</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-sm">Oila nazorati funksiyasi</span>
+</li>
+</ul>
+</div>
+<button class="w-full py-4 bg-surface-container-high text-on-surface font-bold rounded-xl active:scale-95 transition-transform">Tanlash</button>
+</div>
+</section>
+<!-- Newsletter / Upsell -->
+<section class="bg-surface-container-low rounded-3xl p-10 flex flex-col md:flex-row items-center justify-between gap-8 relative overflow-hidden">
+<div class="relative z-10 max-w-md">
+<h2 class="text-3xl font-black mb-4">Yangiliklardan chetda qolmang</h2>
+<p class="text-on-surface-variant mb-6">Haftalik tahliliy dayjestimizga obuna bo'ling va eng muhim voqealarni o'tkazib yubormang.</p>
+<div class="flex gap-2">
+<input class="flex-1 bg-surface-container-highest border-none rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary/20 outline-none" placeholder="Email manzilingiz" type="email"/>
+<button class="bg-primary text-white px-6 py-3 rounded-xl font-bold hover:bg-primary-container transition-colors">Yuborish</button>
+</div>
+</div>
+<div class="w-full md:w-64 h-48 rounded-2xl overflow-hidden shadow-2xl relative z-10">
+<img class="w-full h-full object-cover" data-alt="modern tablet displaying editorial news layout with high resolution photography and elegant typography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdyEn6cEzwiF6iLmFMgnqAnIrsNP1zYRL5PWVaySCL6bTNp4h0UKo6thXZIT9NcmLiVGfcVLkKy7AH5gJkPeR_QpGpW62XmAoN_TXExy_zvHAVOBl8A1CGcNXnmC34HdUnf6xIJwiPfG9b_t1cKFmXRloTP1KoZK7f0VsUAh-kd7I0jQq4irdNWErNg8G1e1RyZ-6xuCC32ZNi70RoSPIpgyhS2J41OirG17Yp_OiR-SL1nnvZ4pp1KeWpsumGPNyXKFkgtsNezeAj"/>
+</div>
+<!-- Decorative Gradient -->
+<div class="absolute -right-20 -bottom-20 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
+</section>
+</main>
+<!-- BottomNavBar (Shared Component Execution - Hidden on Tablet Web/Large views, but visible per instructions) -->
+<footer class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 py-2 pb-safe bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-800 shadow-[0_-4px_20px_rgba(25,28,29,0.06)] z-50 md:hidden">
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-6 py-1.5 active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-work-sans text-[11px] font-semibold uppercase tracking-wider">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-6 py-1.5 active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="reorder">reorder</span>
+<span class="font-work-sans text-[11px] font-semibold uppercase tracking-wider">Lenta</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-6 py-1.5 active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="play_circle">play_circle</span>
+<span class="font-work-sans text-[11px] font-semibold uppercase tracking-wider">Video</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-6 py-1.5 active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="bookmark">bookmark</span>
+<span class="font-work-sans text-[11px] font-semibold uppercase tracking-wider">Saved</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-6 py-1.5 active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="map">map</span>
+<span class="font-work-sans text-[11px] font-semibold uppercase tracking-wider">Regional</span>
+</a>
+</footer>
+</body></html>

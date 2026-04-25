@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+
+<html class="light" lang="uz"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;family=Work+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "inverse-surface": "#2e3132",
+                    "on-primary": "#ffffff",
+                    "tertiary-fixed": "#ffdbca",
+                    "surface": "#f8f9fa",
+                    "surface-variant": "#e1e3e4",
+                    "surface-container": "#edeeef",
+                    "on-tertiary-container": "#ffa877",
+                    "tertiary": "#5c2600",
+                    "surface-bright": "#f8f9fa",
+                    "on-error": "#ffffff",
+                    "inverse-primary": "#a7c8ff",
+                    "on-secondary-fixed": "#071c35",
+                    "secondary-fixed-dim": "#b5c7e9",
+                    "outline-variant": "#c2c6d2",
+                    "secondary": "#4e5f7c",
+                    "background": "#f8f9fa",
+                    "secondary-fixed": "#d5e3ff",
+                    "on-secondary-fixed-variant": "#364763",
+                    "on-primary-fixed": "#001c3b",
+                    "surface-container-high": "#e7e8e9",
+                    "on-secondary": "#ffffff",
+                    "on-tertiary": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "tertiary-container": "#7f3700",
+                    "primary": "#003569",
+                    "primary-fixed": "#d5e3ff",
+                    "inverse-on-surface": "#f0f1f2",
+                    "surface-container-low": "#f3f4f5",
+                    "on-error-container": "#93000a",
+                    "surface-container-highest": "#e1e3e4",
+                    "on-tertiary-fixed": "#331200",
+                    "on-tertiary-fixed-variant": "#763300",
+                    "on-primary-container": "#96beff",
+                    "on-surface": "#191c1d",
+                    "primary-container": "#004c91",
+                    "surface-tint": "#255fa5",
+                    "on-background": "#191c1d",
+                    "on-primary-fixed-variant": "#004788",
+                    "primary-fixed-dim": "#a7c8ff",
+                    "surface-dim": "#d9dadb",
+                    "error": "#ba1a1a",
+                    "secondary-container": "#c9dbfd",
+                    "surface-container-lowest": "#ffffff",
+                    "on-surface-variant": "#424751",
+                    "on-secondary-container": "#4e607d",
+                    "outline": "#727782",
+                    "tertiary-fixed-dim": "#ffb68e"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Inter"],
+                    "body": ["Inter"],
+                    "label": ["Work Sans"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bento-inner-shadow {
+            box-shadow: inset 0 0 40px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-white">
+<!-- TopNavBar Component -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md shadow-sm dark:shadow-none">
+<div class="flex flex-col w-full max-w-7xl mx-auto px-6 py-4">
+<div class="flex items-center justify-between w-full">
+<!-- Brand Logo -->
+<a class="text-2xl font-black text-[#004C91] dark:text-[#3b82f6] tracking-tighter" href="#">Daryo</a>
+<!-- Desktop Navigation Links -->
+<div class="hidden lg:flex items-center space-x-6">
+<a class="text-[#004C91] dark:text-white border-b-2 border-[#004C91] font-bold py-1 transition-colors" href="#">O‘zbekiston</a>
+<a class="text-slate-600 dark:text-slate-400 font-medium hover:text-[#004C91] dark:hover:text-blue-400 transition-colors py-1" href="#">Jahon</a>
+<a class="text-slate-600 dark:text-slate-400 font-medium hover:text-[#004C91] dark:hover:text-blue-400 transition-colors py-1" href="#">Texnologiya</a>
+<a class="text-slate-600 dark:text-slate-400 font-medium hover:text-[#004C91] dark:hover:text-blue-400 transition-colors py-1" href="#">Sport</a>
+<a class="text-slate-600 dark:text-slate-400 font-medium hover:text-[#004C91] dark:hover:text-blue-400 transition-colors py-1" href="#">Madaniyat</a>
+<a class="text-slate-600 dark:text-slate-400 font-medium hover:text-[#004C91] dark:hover:text-blue-400 transition-colors py-1" href="#">Lifestyle</a>
+</div>
+<!-- Trailing Actions -->
+<div class="flex items-center space-x-4">
+<button class="flex items-center space-x-1 text-slate-600 font-medium text-sm px-3 py-1.5 rounded-full bg-surface-container-low hover:bg-surface-container-high transition-all">
+<span class="material-symbols-outlined text-lg">language</span>
+<span>Uzbek</span>
+</button>
+<button class="p-2 text-slate-600 hover:text-primary transition-colors scale-95 active:duration-100">
+<span class="material-symbols-outlined">search</span>
+</button>
+<button class="p-2 text-slate-600 hover:text-primary transition-colors scale-95 active:duration-100 lg:hidden">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</div>
+</nav>
+<main class="pt-24 pb-12 max-w-7xl mx-auto px-6">
+<div class="flex flex-col lg:flex-row gap-8">
+<!-- Main Content Canvas (Primary Feed + Sections) -->
+<div class="flex-1 space-y-12">
+<!-- Hero Bento Grid -->
+<section class="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-4 h-auto md:h-[600px]">
+<!-- Main Feature -->
+<div class="md:col-span-2 md:row-span-2 relative group overflow-hidden rounded-xl bg-surface-container-highest">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Cinematic wide shot of a modern glass skyscraper in Tashkent at sunset with warm reflections and deep blue shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjSVDnbhIv5ZSuKCZZwnHk-7thjnIkWvQyEH9gmAEpIk3IopDNugaVqM-JbpvwXSWyPWzgyLchJ9rBtFy3SmI3LE2K5Cj57jnmxqAarcg3HNod7pH9SW_-zq8EwJxx2I-brnCNl_je1NwRVrOce9itbHyeIyXEhWLu5A0_Hn_CYWFDDdwlHZH2xvY3q8Fq0mOAe0Fkcvc2df6w0xBXkiij7g-YWmB6p3uyAyURCXxAoX-Cv2ytAsk27MyGde9zHupOiPP1EFKF8Mfy"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent p-8 flex flex-col justify-end">
+<span class="inline-block px-3 py-1 bg-primary text-white text-xs font-bold rounded-full mb-4 w-fit">DOLZARB</span>
+<h1 class="text-3xl md:text-4xl font-black text-white leading-tight tracking-tight">O‘zbekistonda 2026-yilga qadar iqtisodiy islohotlar yangi bosqichga ko‘tariladi</h1>
+<p class="text-slate-300 mt-4 line-clamp-2 font-medium">Prezident farmoni bilan tasdiqlangan yangi strategiya doirasida sanoat va texnologiyalar rivojiga alohida e'tibor qaratiladi.</p>
+</div>
+</div>
+<!-- Secondary Feature 1 -->
+<div class="md:col-span-2 relative group overflow-hidden rounded-xl bg-surface-container-highest">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="High-tech server room with glowing blue LED lights and futuristic atmosphere of digital data processing" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpWOYfntQ5Vf-9qoEfQkh-vEn4kOxpvWeYmd2TZ7F-QIzgazipRxbvkDgweNfstgQ2UKBkYjB2tqEWftrt5C83NiIakXeGnxWk6upGdYtJY_agPaDxsU_W1VpyPe6G-I7Jh8D-EwyNED0f2vEV815XcA44EKUXLyQyggGJAGd-fvwlMQcr_CI_nK5OJCPycF-_AIywlgYAYvpg5GZJW66ngtBZk_vYwBDw8tJULgDbEfeOIsMovYKWpALPb3N14nngD_Wpe21Ev1PB"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent p-6 flex flex-col justify-end">
+<span class="inline-block px-3 py-1 bg-[#3b82f6] text-white text-xs font-bold rounded-full mb-2 w-fit uppercase">Texnologiya</span>
+<h2 class="text-xl font-bold text-white leading-snug">Sun'iy intellekt o‘zbek tilida: Milliy neyrotarmoq ishga tushirildi</h2>
+</div>
+</div>
+<!-- Secondary Feature 2 -->
+<div class="md:col-span-1 relative group overflow-hidden rounded-xl bg-surface-container-highest">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Dramatic aerial view of a global business district with glowing city lights at night" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHBtyS4jT3mNIesreh-rDQeiwtxASeYKAgaW_-keeafqtLrBO98duAmNEeJ22YqJ1z_wTLYFS-1i6Ej3LsMEruiEXJbwx8PKxUwY8xzNoFKDxYaiJ7adQUGw_SFDXiMN7vde7jf2EkKmCPFMPsaJoBOfLlBuhzh4j3t3LFLBeKKKbQhIMZJwHtHpPNEydRgBAv_RpbZHjT9ef9CDGKbDbqzw6eivPENwxF9fKMoqhzo0h2BjUrl5e0Xh4LLWeNIEPfcpd8_4VfoZu9"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent p-4 flex flex-col justify-end">
+<span class="inline-block px-2 py-1 bg-slate-700 text-white text-[10px] font-bold rounded-full mb-2 w-fit uppercase">Jahon</span>
+<h3 class="text-sm font-bold text-white">Global iqlim o'zgarishi: Markaziy Osiyo uchun yangi xavflar</h3>
+</div>
+</div>
+<!-- Secondary Feature 3 -->
+<div class="md:col-span-1 relative group overflow-hidden rounded-xl bg-surface-container-highest">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Close-up of a soccer ball on a professional grass field with stadium lights in the background blur" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9lyUBVOjqNuMrIFbppgR5yG5kJd-4tYrwQgH7mbK5nj43oRE-Xlve1rvsSLCb5aK6V5QKCCFkfbEUmb2EJSD3FqbYNLNMVdBMbdCJEWGEH-X8m5v5xKAVFnGjlFO7J5M2xhEmIhBbpUWje19W_oCs6VjGN5ZDbi-QjJqSKBHPOpf-OeS6k95p8esloz4bjOL4Yf70IY7DQvDFepLZkgt3DlRT8ufmg9Hk9YdY0PRz1cc6K7l80AIUCOSgxkT43cP8PY8X4u49a6mm"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent p-4 flex flex-col justify-end">
+<span class="inline-block px-2 py-1 bg-green-600 text-white text-[10px] font-bold rounded-full mb-2 w-fit uppercase">Sport</span>
+<h3 class="text-sm font-bold text-white">O'zbekiston milliy terma jamoasi jahon chempionati saralashida</h3>
+</div>
+</div>
+</section>
+<!-- News Feed (Asymmetric Layout) -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Column 1: Uzbekistan -->
+<section class="space-y-6">
+<div class="flex items-center justify-between">
+<h2 class="text-2xl font-black text-primary flex items-center gap-2">
+<span class="w-2 h-8 bg-primary rounded-full"></span>
+                                O‘zbekiston
+                            </h2>
+<a class="text-sm font-bold text-primary-container hover:underline" href="#">Barchasi</a>
+</div>
+<div class="space-y-8">
+<!-- Large News Item -->
+<article class="group cursor-pointer">
+<div class="aspect-video overflow-hidden rounded-xl bg-surface-container-low mb-4">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Aerial view of Registan Square in Samarkand with intricate blue mosaic architecture under clear blue sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCY2AZG_8C_MtiFPVtEvLF8MFZxsrCoxEonOsN8c0wG8tx5eK6OJ39Rkp490_DjjFRoeUaKgBXS8aMVwJz4lXzwAEPqqkxuez6j7jKr7F9f7RHyn3etUpdh2ahDj6jNDflhEAOYQBFMfiE2a5AxZhWa-251abXPsLflgPKWl-T3r14x6JZ4EKytKJdfO2VRKiWNf7BRLgBwmoQc1OKUGUDV14_p8dUhfw7DczQLgpx1I1GRkXg5vFwihlgxXKVwkiOQ_GW7RKBysuWu"/>
+</div>
+<span class="font-label text-xs text-primary font-bold uppercase tracking-wider">Jamiyat</span>
+<h3 class="text-xl font-bold mt-2 group-hover:text-primary transition-colors">Toshkent metrosining yangi bekatlari foydalanishga topshirildi</h3>
+<p class="text-on-surface-variant text-sm mt-2 line-clamp-2">Poytaxtning janubiy qismida transport infratuzilmasini yaxshilash maqsadida amalga oshirilgan loyiha nihoyasiga yetdi.</p>
+</article>
+<!-- List Style Item -->
+<div class="space-y-6">
+<article class="flex gap-4 group cursor-pointer">
+<div class="w-24 h-24 flex-shrink-0 overflow-hidden rounded-lg bg-surface-container-low">
+<img class="w-full h-full object-cover" data-alt="Close-up of golden wheat fields in Uzbekistan countryside with warm sunlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuACZU7Epe6IBlkzhgXLKdtk_p2pAsaoSGQqORdq1ljjuPBswH0jvdPfVUoPmKmNN9t9Gg4s-tOYmTRS73iSkLljP6QJbFJGubEw0GZb8rt3Xzr6KcVXCZwoq3eFx0zLW_Y5lSPjW96z3VFI6xPR5zmLLVhEeg0RSZDFXt5FH9bR5-hRVr_xa_ijEAiLbYCDMXpavSqINLo1utIkxTRukJS-TT8jNvqm5_Vpbg7-wK_-709dWS0Ba__7IjFOlh3yIoS6AOapiQOyjRqd"/>
+</div>
+<div class="flex flex-col justify-center">
+<span class="font-label text-[10px] text-slate-500 font-medium">14:20 • IQTISODIYOT</span>
+<h4 class="text-sm font-bold group-hover:text-primary transition-colors">G'alla hosildorligi bo'yicha rekord natija qayd etildi</h4>
+</div>
+</article>
+<article class="flex gap-4 group cursor-pointer">
+<div class="w-24 h-24 flex-shrink-0 overflow-hidden rounded-lg bg-surface-container-low">
+<img class="w-full h-full object-cover" data-alt="Modern high-speed train Afrosiyob moving through desert landscape in Uzbekistan" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAV3fWPh-lcE4fv3pBB7QxUpVP-xB7lUsgV6YNCmXUUAgrlhvNOdib_AN6liNmM49Yetl5PINNEdGyxId2lewverazbhOb93DJWH2ceog-arKzkFdubPs0-EIoeO8A42-hBdavbWvKNFv73M80ERNKY8Pd0WC7HB6dgvF5RXp5Om7vH4C2SRcuzfHNhmu0DzszFDAg01BRqq1pvmTaWALQjg5c9z4-uD3BCeLtBcNIbjufRTPyFpKUFJz_dV9ZJpyBh72G8q-uckz1x"/>
+</div>
+<div class="flex flex-col justify-center">
+<span class="font-label text-[10px] text-slate-500 font-medium">12:15 • TURIZM</span>
+<h4 class="text-sm font-bold group-hover:text-primary transition-colors">Turistlar oqimi o'tgan yilga nisbatan 40% ga oshdi</h4>
+</div>
+</article>
+</div>
+</div>
+</section>
+<!-- Column 2: Tech & Lifestyle -->
+<section class="space-y-6">
+<div class="flex items-center justify-between">
+<h2 class="text-2xl font-black text-primary flex items-center gap-2">
+<span class="w-2 h-8 bg-primary rounded-full"></span>
+                                Texnologiya
+                            </h2>
+<a class="text-sm font-bold text-primary-container hover:underline" href="#">Barchasi</a>
+</div>
+<div class="space-y-4">
+<div class="p-6 bg-inverse-surface text-white rounded-xl space-y-4 relative overflow-hidden">
+<div class="absolute -right-12 -top-12 w-48 h-48 bg-primary-container/20 rounded-full blur-3xl"></div>
+<span class="inline-block px-2 py-0.5 border border-white/30 rounded text-[10px] font-bold tracking-widest uppercase">Eksklyuziv</span>
+<h3 class="text-xl font-bold leading-tight">Yangi avlod kvant kompyuterlari: Insoniyat uchun qanday imkoniyatlar ochiladi?</h3>
+<p class="text-slate-400 text-sm">Dunyoning eng yirik texnologik gigantlari yangi poyga ostonasida turibdi.</p>
+<button class="mt-4 flex items-center gap-2 text-primary-container font-bold text-sm bg-white px-4 py-2 rounded-lg hover:bg-slate-100 transition-colors">
+                                    Batafsil o'qish
+                                    <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+<article class="p-4 border-l-4 border-primary bg-surface-container-low rounded-r-xl">
+<span class="font-label text-[10px] text-primary font-bold">GADJETLAR</span>
+<h4 class="text-base font-bold mt-1">Apple yangi M4 chipli MacBook Pro modellarini namoyish etdi</h4>
+</article>
+<article class="p-4 border-l-4 border-slate-300 bg-surface-container-low rounded-r-xl">
+<span class="font-label text-[10px] text-slate-500 font-bold">ILM-FAN</span>
+<h4 class="text-base font-bold mt-1">Marsda hayot izlari: Rover yangi namunalar topdi</h4>
+</article>
+</div>
+</section>
+</div>
+<!-- Premium CTA Section (Organic Bento) -->
+<section class="bg-gradient-to-r from-primary to-primary-container rounded-2xl p-1 px-1">
+<div class="bg-surface-container-lowest rounded-2xl p-8 flex flex-col md:flex-row items-center justify-between gap-8">
+<div class="space-y-4 max-w-xl">
+<div class="flex items-center gap-2 text-[#7f3700]">
+<span class="material-symbols-outlined">workspace_premium</span>
+<span class="font-bold text-sm uppercase tracking-widest">Daryo Premium</span>
+</div>
+<h2 class="text-3xl font-black text-on-surface">Cheksiz bilim va tahlillar olamiga qo'shiling</h2>
+<p class="text-on-surface-variant">Eksklyuziv intervyular, chuqur tahliliy maqolalar va reklamasiz sayt mutolaasidan bahra oling.</p>
+</div>
+<button class="bg-primary text-white font-bold px-10 py-4 rounded-xl shadow-lg hover:shadow-primary/20 hover:-translate-y-1 transition-all duration-300">
+                            Obuna bo‘lish
+                        </button>
+</div>
+</section>
+</div>
+<!-- SideNavBar (Lenta) Component -->
+<aside class="hidden lg:flex flex-col p-4 space-y-2 h-[calc(100vh-120px)] w-80 sticky top-24 bg-slate-50 dark:bg-slate-950 rounded-2xl">
+<!-- Lenta Header -->
+<div class="flex items-center justify-between mb-4 px-2">
+<div>
+<h2 class="font-headline font-extrabold text-lg text-primary tracking-tight">Lenta</h2>
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 bg-red-600 rounded-full animate-pulse"></span>
+<span class="text-[10px] font-label font-bold text-slate-500 uppercase tracking-tighter">Jonli efir</span>
+</div>
+</div>
+<button class="text-primary hover:bg-slate-200 p-2 rounded-full transition-colors">
+<span class="material-symbols-outlined">schedule</span>
+</button>
+</div>
+<!-- Feed Items -->
+<div class="flex-1 overflow-y-auto space-y-1 pr-2 custom-scrollbar">
+<div class="p-3 bg-white dark:bg-slate-900 text-[#004C91] font-bold rounded-lg shadow-sm flex flex-col gap-1 transition-all hover:translate-x-1">
+<span class="text-[10px] text-slate-400 font-label">16:45</span>
+<p class="text-sm leading-snug">Oliy Majlis Senati yangi qonun loyihasini ma'qulladi</p>
+</div>
+<div class="p-3 text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg flex flex-col gap-1 transition-all hover:translate-x-1 duration-200">
+<span class="text-[10px] text-slate-400 font-label">16:32</span>
+<p class="text-sm leading-snug">Toshkentda havo harorati kutilmaganda pasayishi aytilmoqda</p>
+</div>
+<div class="p-3 text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg flex flex-col gap-1 transition-all hover:translate-x-1 duration-200">
+<span class="text-[10px] text-slate-400 font-label">16:15</span>
+<p class="text-sm leading-snug">Markaziy bank valyuta kurslarini yangiladi</p>
+</div>
+<div class="p-3 text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg flex flex-col gap-1 transition-all hover:translate-x-1 duration-200">
+<span class="text-[10px] text-slate-400 font-label">15:58</span>
+<p class="text-sm leading-snug">Namanganda yangi tekstil korxonasi ish boshladi</p>
+</div>
+<div class="p-3 text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg flex flex-col gap-1 transition-all hover:translate-x-1 duration-200">
+<span class="text-[10px] text-slate-400 font-label">15:40</span>
+<p class="text-sm leading-snug">Shavkat Mirziyoyev hududlarni rivojlantirish bo'yicha yig'ilish o'tkazdi</p>
+</div>
+<div class="p-3 text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg flex flex-col gap-1 transition-all hover:translate-x-1 duration-200">
+<span class="text-[10px] text-slate-400 font-label">15:12</span>
+<p class="text-sm leading-snug">O'zbekistonlik shaxmatchilar xalqaro turnirda g'olib bo'lishdi</p>
+</div>
+</div>
+<!-- Sidebar Footer -->
+<div class="pt-4 border-t border-slate-200 flex flex-col gap-4">
+<div class="flex justify-around items-center">
+<a class="text-slate-400 hover:text-[#0088cc] transition-colors" href="#"><span class="material-symbols-outlined">send</span></a>
+<a class="text-slate-400 hover:text-[#1877f2] transition-colors" href="#"><span class="material-symbols-outlined">groups</span></a>
+<a class="text-slate-400 hover:text-[#e4405f] transition-colors" href="#"><span class="material-symbols-outlined">photo_camera</span></a>
+</div>
+<button class="w-full bg-primary text-white font-bold py-3 rounded-xl text-sm transition-transform active:scale-95">
+                        Obuna bo‘lish
+                    </button>
+</div>
+</aside>
+</div>
+</main>
+<!-- Footer Component -->
+<footer class="w-full border-t border-slate-200 dark:border-slate-800 bg-slate-100 dark:bg-slate-950">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 px-6 py-12 max-w-7xl mx-auto">
+<div class="space-y-4">
+<div class="text-xl font-bold text-slate-900 dark:text-white">Daryo</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-inter leading-relaxed">
+                    O‘zbekiston va jahon yangiliklari, tahliliy maqolalar, intervyular va videoxabarlar portali.
+                </p>
+</div>
+<div class="space-y-4">
+<h4 class="font-bold text-slate-900 dark:text-white uppercase tracking-widest text-xs">Bo'limlar</h4>
+<div class="flex flex-col space-y-2">
+<a class="text-slate-500 dark:text-slate-400 hover:underline decoration-2 transition-all text-sm" href="#">O‘zbekiston</a>
+<a class="text-slate-500 dark:text-slate-400 hover:underline decoration-2 transition-all text-sm" href="#">Jahon</a>
+<a class="text-slate-500 dark:text-slate-400 hover:underline decoration-2 transition-all text-sm" href="#">Texnologiya</a>
+<a class="text-slate-500 dark:text-slate-400 hover:underline decoration-2 transition-all text-sm" href="#">Sport</a>
+</div>
+</div>
+<div class="space-y-4">
+<h4 class="font-bold text-slate-900 dark:text-white uppercase tracking-widest text-xs">Ma'lumot</h4>
+<div class="flex flex-col space-y-2">
+<a class="text-slate-500 dark:text-slate-400 hover:underline decoration-2 transition-all text-sm" href="#">Tahririyat</a>
+<a class="text-slate-500 dark:text-slate-400 hover:underline decoration-2 transition-all text-sm" href="#">Reklama</a>
+<a class="text-slate-500 dark:text-slate-400 hover:underline decoration-2 transition-all text-sm" href="#">Bog‘lanish</a>
+<a class="text-slate-500 dark:text-slate-400 hover:underline decoration-2 transition-all text-sm" href="#">Maxfiylik siyosati</a>
+</div>
+</div>
+<div class="space-y-4">
+<h4 class="font-bold text-slate-900 dark:text-white uppercase tracking-widest text-xs">Obuna</h4>
+<p class="text-slate-500 text-sm">Eng so'nggi yangiliklardan xabardor bo'ling.</p>
+<div class="flex">
+<input class="bg-white border-none rounded-l-lg text-sm w-full focus:ring-1 focus:ring-primary" placeholder="Email" type="email"/>
+<button class="bg-primary text-white p-2 rounded-r-lg"><span class="material-symbols-outlined">send</span></button>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-6 py-6 border-t border-slate-200 dark:border-slate-800 text-center">
+<p class="text-slate-500 dark:text-slate-400 text-sm font-inter">© 2024 Daryo.uz. Barcha huquqlar himoyalangan.</p>
+</div>
+</footer>
+</body></html>

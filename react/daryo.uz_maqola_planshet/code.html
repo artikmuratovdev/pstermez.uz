@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+
+<html class="light" lang="uz"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&amp;family=Work+Sans:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "background": "#f8f9fa",
+                    "on-error-container": "#93000a",
+                    "error-container": "#ffdad6",
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary-container": "#7f3700",
+                    "on-tertiary-fixed-variant": "#763300",
+                    "tertiary-fixed": "#ffdbca",
+                    "surface-bright": "#f8f9fa",
+                    "secondary-fixed-dim": "#b5c7e9",
+                    "inverse-surface": "#2e3132",
+                    "on-primary-container": "#96beff",
+                    "surface": "#f8f9fa",
+                    "error": "#ba1a1a",
+                    "primary": "#003569",
+                    "on-secondary-fixed-variant": "#364763",
+                    "tertiary": "#5c2600",
+                    "on-surface": "#191c1d",
+                    "surface-container-low": "#f3f4f5",
+                    "surface-container-high": "#e7e8e9",
+                    "on-secondary-fixed": "#071c35",
+                    "secondary": "#4e5f7c",
+                    "primary-fixed-dim": "#a7c8ff",
+                    "inverse-on-surface": "#f0f1f2",
+                    "outline": "#727782",
+                    "on-surface-variant": "#424751",
+                    "on-tertiary": "#ffffff",
+                    "surface-container": "#edeeef",
+                    "secondary-container": "#c9dbfd",
+                    "on-primary-fixed": "#001c3b",
+                    "on-primary": "#ffffff",
+                    "tertiary-fixed-dim": "#ffb68e",
+                    "on-tertiary-container": "#ffa877",
+                    "secondary-fixed": "#d5e3ff",
+                    "on-error": "#ffffff",
+                    "on-background": "#191c1d",
+                    "surface-container-highest": "#e1e3e4",
+                    "outline-variant": "#c2c6d2",
+                    "on-primary-fixed-variant": "#004788",
+                    "inverse-primary": "#a7c8ff",
+                    "surface-variant": "#e1e3e4",
+                    "on-secondary-container": "#4e607d",
+                    "on-secondary": "#ffffff",
+                    "primary-fixed": "#d5e3ff",
+                    "surface-dim": "#d9dadb",
+                    "surface-tint": "#255fa5",
+                    "on-tertiary-fixed": "#331200",
+                    "primary-container": "#004c91"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Inter"],
+                    "body": ["Inter"],
+                    "label": ["Work Sans"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+        .article-content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.75;
+            color: #424751;
+            font-size: 1.125rem;
+        }
+        .article-content blockquote {
+            border-left: 4px solid #004C91;
+            padding-left: 1.5rem;
+            font-style: italic;
+            margin: 2rem 0;
+            color: #191c1d;
+            font-size: 1.25rem;
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface selection:bg-primary-container selection:text-white">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-xl transition-all">
+<div class="flex justify-between items-center h-16 px-6 lg:px-12 w-full mx-auto max-w-full">
+<div class="flex items-center gap-8">
+<span class="text-2xl font-black italic tracking-tighter text-[#004C91]">Daryo</span>
+<div class="hidden md:flex items-center gap-6">
+<a class="font-inter tracking-tight font-bold text-[#004C91] border-b-2 border-[#004C91] pb-1" href="#">Politics</a>
+<a class="font-inter tracking-tight font-bold text-slate-600 hover:text-on-surface transition-colors" href="#">Economy</a>
+<a class="font-inter tracking-tight font-bold text-slate-600 hover:text-on-surface transition-colors" href="#">Society</a>
+<a class="font-inter tracking-tight font-bold text-slate-600 hover:text-on-surface transition-colors" href="#">World</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 hover:bg-slate-100/50 rounded-lg transition-all active:scale-95">
+<span class="material-symbols-outlined text-slate-600">search</span>
+</button>
+<button class="p-2 hover:bg-slate-100/50 rounded-lg transition-all active:scale-95">
+<span class="material-symbols-outlined text-slate-600">menu</span>
+</button>
+</div>
+</div>
+</nav>
+<main class="pt-24 pb-32">
+<div class="max-w-[800px] mx-auto px-6 lg:px-0">
+<!-- Article Header -->
+<header class="mb-8">
+<div class="flex gap-2 mb-4">
+<span class="bg-primary-container/10 text-primary-container px-3 py-1 rounded-full font-label text-xs font-semibold uppercase tracking-wider">Politics</span>
+<span class="bg-surface-container-high text-on-surface-variant px-3 py-1 rounded-full font-label text-xs font-semibold uppercase tracking-wider">Analysis</span>
+</div>
+<h1 class="text-4xl lg:text-5xl font-black tracking-tight text-on-surface leading-[1.1] mb-6">
+                    O‘zbekiston va Markaziy Osiyo: Yangi iqtisodiy hamkorlik bosqichi boshlanmoqda
+                </h1>
+<div class="flex items-center justify-between py-6 border-y border-outline-variant/20">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest overflow-hidden">
+<img alt="Journalist portrait" class="w-full h-full object-cover" data-alt="close-up portrait of a professional male journalist with glasses in a modern office setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-OvEWI6l7FGth8u6qHnjKaUqc0bCwUW51BMQuEhzKIY0gSYLxb80caf2SiQ9OhBVV8VkLXoeDSxdZiGSGPwaMsUm3KKOZ08yfqd8dG9jOI6KmQsBVR-rHvmzoXm-nZm0Jbs4eplXzSuZkIOCh_C1PzJTVPlDiAUI_Mjr-5Hy94qkGDlWKGMBJ7U1xf0eb8pfQwrS9T8SA-D4Mw4G7nUZyJ7NpVfd9vnjh_-Wi7L0MuQncQU57PyGHeugs_2nE8XV0MteScCRfMKg4"/>
+</div>
+<div>
+<p class="font-bold text-on-surface text-sm">Azamat Shokirov</p>
+<p class="font-label text-on-surface-variant text-xs">24 Oktyabr, 2023 • 14:30</p>
+</div>
+</div>
+<div class="flex items-center gap-4 text-on-surface-variant font-label text-sm">
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+                            12.4k
+                        </span>
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px]">chat_bubble</span>
+                            42
+                        </span>
+</div>
+</div>
+</header>
+<!-- Hero Image -->
+<figure class="mb-12">
+<div class="aspect-[16/9] rounded-2xl overflow-hidden bg-surface-container-low">
+<img alt="Central Asian Summit" class="w-full h-full object-cover" data-alt="wide shot of high-level diplomatic meeting in a grand hall with regional flags and modern architectural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvRb3uApGm3dfz02Qv-jO0clRST4oLfADizbpirjQA_qFpXmzhpKn-gAEB5gR7F7BBW0RKhhE8BjGZ-GhmYXMEzcm41XgqDv3pxRP8CmdBLyqIJzr-Tkl7lOKlZBSQAz_MqQOZh6rmUaOjLgUM4qbL_kRX5w7W23V24fGVJwPkFup8h-NtsQtui84cLCimgdhHmRUKunvk40_lk5y7guPbG9E89NKNOJhynaeQjTsbUMBIClr51RPXSij4vhaRvY4g9qgrwmsZxsSx"/>
+</div>
+<figcaption class="mt-3 text-sm text-on-surface-variant italic text-center">
+                    Toshkentdagi sammit doirasida Markaziy Osiyo yetakchilarining uchrashuvi. Foto: Daryo / Arxiv
+                </figcaption>
+</figure>
+<!-- Social Sharing Floating Side -->
+<div class="relative">
+<div class="hidden lg:flex flex-col gap-4 absolute -left-20 top-0">
+<button class="w-12 h-12 rounded-full bg-surface-container-lowest border border-outline-variant/30 flex items-center justify-center hover:bg-primary-container hover:text-white transition-all">
+<span class="material-symbols-outlined">share</span>
+</button>
+<button class="w-12 h-12 rounded-full bg-surface-container-lowest border border-outline-variant/30 flex items-center justify-center hover:bg-[#1877F2] hover:text-white transition-all">
+<span class="material-symbols-outlined">social_leaderboard</span>
+</button>
+<button class="w-12 h-12 rounded-full bg-surface-container-lowest border border-outline-variant/30 flex items-center justify-center hover:bg-black hover:text-white transition-all">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<!-- Article Content -->
+<div class="article-content">
+<p class="font-semibold text-xl leading-relaxed text-on-surface mb-8">
+                        Markaziy Osiyo mintaqasi so‘nggi yillarda global geopolitik o‘zgarishlar fonida yangi iqtisodiy markazga aylanmoqda. O‘zbekistonning ochiq tashqi siyosati bu jarayonda katalizator vazifasini o‘tamoqda.
+                    </p>
+<p>
+                        Mintaqaviy hamkorlikning yangi bosqichi nafaqat savdo-sotiq, balki yirik sanoat kooperatsiyasi va logistika loyihalarini ham o‘z ichiga oladi. O‘zbekiston va Qozog‘iston o‘rtasidagi tovar ayirboshlash hajmi rekord darajaga yetishi kutilmoqda.
+                    </p>
+<blockquote>
+                        "Markaziy Osiyo endi shunchaki geografik tushuncha emas, u birlashgan iqtisodiy kuchga aylanmoqda. Bizning maqsadimiz — to‘siqlarsiz savdo hududini yaratishdir."
+                    </blockquote>
+<p>
+                        Yangi energetika loyihalari, xususan, qayta tiklanuvchi energiya manbalari bo‘yicha mintaqaviy strategiyalar ishlab chiqilmoqda. Bu esa kelajakda mintaqaning energiya mustaqilligini ta'minlashda muhim o'rin tutadi.
+                    </p>
+<div class="my-10 bg-surface-container-low p-8 rounded-2xl">
+<h4 class="font-bold mb-4 text-on-surface">Asosiy ko'rsatkichlar:</h4>
+<ul class="space-y-3">
+<li class="flex items-center gap-3">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="text-on-surface-variant font-medium">Investitsiya oqimi 25% ga oshdi</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="text-on-surface-variant font-medium">Yangi transport yo'laklari ishga tushirilishi</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="text-on-surface-variant font-medium">50 dan ortiq qo'shma sanoat korxonalari</span>
+</li>
+</ul>
+</div>
+<p>
+                        Xulosa qilib aytganda, mintaqaviy integratsiya jarayonlari ortga qaytmas tus olgan. Bu esa kelgusi o‘n yillikda Markaziy Osiyo davlatlarining global iqtisodiyotdagi nufuzini yanada oshiradi.
+                    </p>
+</div>
+<!-- Article Footer / Tags -->
+<div class="mt-12 flex flex-wrap gap-3">
+<a class="px-4 py-2 bg-surface-container border border-outline-variant/10 rounded-lg text-sm font-medium hover:bg-surface-container-high transition-colors" href="#">#O‘zbekiston</a>
+<a class="px-4 py-2 bg-surface-container border border-outline-variant/10 rounded-lg text-sm font-medium hover:bg-surface-container-high transition-colors" href="#">#Iqtisodiyot</a>
+<a class="px-4 py-2 bg-surface-container border border-outline-variant/10 rounded-lg text-sm font-medium hover:bg-surface-container-high transition-colors" href="#">#MarkaziyOsiyo</a>
+</div>
+</div>
+</div>
+<!-- Recommended Section -->
+<section class="mt-20 border-t border-outline-variant/20 pt-16 max-w-[800px] mx-auto px-6 lg:px-0">
+<div class="flex items-center justify-between mb-8">
+<h3 class="text-2xl font-black text-on-surface tracking-tight">Tavsiya etamiz</h3>
+<a class="text-primary font-bold text-sm hover:underline" href="#">Hammasini ko'rish</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Card 1 -->
+<article class="group cursor-pointer">
+<div class="aspect-[4/3] rounded-2xl overflow-hidden mb-4 bg-surface-container-low">
+<img alt="Finance graph" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="close-up of digital financial data display with neon blue charts and stock market indicators on dark screen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwJ_CjRCoyrEzELSvloPSQp6oRclFBCoTnC4IgbaU7qMfQh8Qnzb63KpFaOh1n9BF6pfi1xC9q00ehkSvvUN2DgwwF_cgm_ohOdG3C878jUgetqruv2FOxvc6hG79H1y9ZqgIvNFUgsHo4ByUwqo9Vojkrwt3-HtaEq90Ykkrt06XyGv1PbxEAkzcSl-VCcmYVz8JE5Wred09cexTeFi8s1s7TsYQl5aNOGm1F6WlF3-OWk9Tn-sk8hhFBDak_RPz2KzWbDXusEPQG"/>
+</div>
+<div>
+<span class="font-label text-[10px] font-bold uppercase tracking-widest text-primary mb-2 block">Moliya</span>
+<h4 class="font-bold text-lg leading-snug group-hover:text-primary transition-colors">Yangi soliq islohotlari tadbirkorlar uchun nimalarni va'da qilmoqda?</h4>
+<p class="text-on-surface-variant text-xs font-label mt-2">12 soat oldin • 3.2k o'qildi</p>
+</div>
+</article>
+<!-- Card 2 -->
+<article class="group cursor-pointer">
+<div class="aspect-[4/3] rounded-2xl overflow-hidden mb-4 bg-surface-container-low">
+<img alt="Modern city" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="low angle shot of futuristic glass skyscrapers in Tashkent New City under a clear blue sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQdu8CEWooj36fh3Mng6nh1CaQMRd-E6_qMeRgjOdBfTe56Zdzl9lnIato-sTDRav3Jz59jUlcua2ZKlL3QKntyu6yJfPMS3iRjUvweQ_Jf_TCBNKitbevlQO3U0ANRGIjp-NOwVhXDKtWSPuvjj8uMrr-s-ZrRBCH0kZAWtj9v-Sv80BRySew9oQVCPLIu5teures-fBawnzDCQ2zCsg5LC8jpFDM4qx-0L3Zdi7Mn5GQ44ADKbyELqFtNO5c_NRwth0jObQhP4BZ"/>
+</div>
+<div>
+<span class="font-label text-[10px] font-bold uppercase tracking-widest text-primary mb-2 block">Jamiyat</span>
+<h4 class="font-bold text-lg leading-snug group-hover:text-primary transition-colors">Toshkent shahrida jamoat transporti islohoti: kutilayotgan natijalar</h4>
+<p class="text-on-surface-variant text-xs font-label mt-2">1 kun oldin • 5.1k o'qildi</p>
+</div>
+</article>
+<!-- Card 3 -->
+<article class="group cursor-pointer">
+<div class="aspect-[4/3] rounded-2xl overflow-hidden mb-4 bg-surface-container-low">
+<img alt="Tech background" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="abstract technological digital nodes connected by blue light lines on dark background representing global network" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdtRjFEKVgyeMGkxWdnhSmBiXmtogCP_9k40alJnpRzIFqhAl8IAJ1Qj3ZrVuOdwOnNWd1nd22_GOLrXcL2cqVIuyNEbTCJ4gfiB_6r90Alkor6NsUqifya1-eyyeNQlGx__kHAZ6PiUYPEg0LmHksqh76ZZhriEFdXHrGcJv8mxo1Xj0gUuu2ThEaxU-F2EP5ou8O4_WMpB8RZIGUxE6dePfUdMBC9mvS3-WYjvGBVk2CDeH0yHoIJpsDkO7v2f-MTEUgfq7OdkV6"/>
+</div>
+<div>
+<span class="font-label text-[10px] font-bold uppercase tracking-widest text-primary mb-2 block">Texnologiya</span>
+<h4 class="font-bold text-lg leading-snug group-hover:text-primary transition-colors">O'zbekistonda sun'iy intellekt markazi tashkil etiladi</h4>
+<p class="text-on-surface-variant text-xs font-label mt-2">2 kun oldin • 2.8k o'qildi</p>
+</div>
+</article>
+<!-- Card 4 -->
+<article class="group cursor-pointer">
+<div class="aspect-[4/3] rounded-2xl overflow-hidden mb-4 bg-surface-container-low">
+<img alt="Educational setting" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="bright modern university library interior with students studying on laptops and rows of bookshelves" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdgA5VPWwMkndW7FIclF0qAhxyuyX1inc6Rd6aeYO1qEVj7PbdZlln3_UuOPTRRbzfUiRdWZWQxr3R_mlhU207Cxi4CsRhZGeU0S5mexv0aEC3BHXy2I-YHU9HjkEWbl1GwjSrvNT8aKq4RfjIJT55Qy9d-n6iPqMeZVIryFVqNDVISRmnaGEXa-2NAK_Yljf1ZVWmzC78o0gjRxgfbct2XUhGKse8_MBg2Nc0gNzqj4Y7mdkTb4DpoGokHB1q6gNlnb4VQ0GEEVwC"/>
+</div>
+<div>
+<span class="font-label text-[10px] font-bold uppercase tracking-widest text-primary mb-2 block">Ta'lim</span>
+<h4 class="font-bold text-lg leading-snug group-hover:text-primary transition-colors">Oliy ta'lim muassasalariga kirish imtihonlaridagi o'zgarishlar</h4>
+<p class="text-on-surface-variant text-xs font-label mt-2">3 kun oldin • 8.4k o'qildi</p>
+</div>
+</article>
+</div>
+</section>
+</main>
+<!-- BottomNavBar (Suppressed for focused article reading unless at top level, but kept for context as requested in logic) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center px-4 py-2 pb-safe shadow-lg bg-white z-50 rounded-t-2xl border-t border-slate-100">
+<a class="flex flex-col items-center justify-center text-slate-500 px-6 py-1.5 transition-all" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="font-work-sans text-[11px] font-semibold uppercase tracking-wider mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 px-6 py-1.5 transition-all" href="#">
+<span class="material-symbols-outlined">reorder</span>
+<span class="font-work-sans text-[11px] font-semibold uppercase tracking-wider mt-1">Lenta</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 px-6 py-1.5 transition-all" href="#">
+<span class="material-symbols-outlined">play_circle</span>
+<span class="font-work-sans text-[11px] font-semibold uppercase tracking-wider mt-1">Video</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-[#004C91]/10 text-[#004C91] rounded-xl px-6 py-1.5 transition-all" href="#">
+<span class="material-symbols-outlined">bookmark</span>
+<span class="font-work-sans text-[11px] font-semibold uppercase tracking-wider mt-1">Saved</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 px-6 py-1.5 transition-all" href="#">
+<span class="material-symbols-outlined">map</span>
+<span class="font-work-sans text-[11px] font-semibold uppercase tracking-wider mt-1">Regional</span>
+</a>
+</nav>
+<!-- Simple Footer -->
+<footer class="bg-surface-container-low border-t border-outline-variant/10 py-12">
+<div class="max-w-[800px] mx-auto px-6 lg:px-0 flex flex-col md:flex-row justify-between items-center gap-6">
+<span class="text-xl font-black italic tracking-tighter text-slate-400">Daryo</span>
+<div class="flex gap-8">
+<a class="text-sm font-label font-medium text-on-surface-variant hover:text-primary" href="#">About Us</a>
+<a class="text-sm font-label font-medium text-on-surface-variant hover:text-primary" href="#">Advertising</a>
+<a class="text-sm font-label font-medium text-on-surface-variant hover:text-primary" href="#">Contact</a>
+</div>
+<p class="text-xs font-label text-on-surface-variant">© 2023 Daryo. Barcha huquqlar himoyalangan.</p>
+</div>
+</footer>
+</body></html>

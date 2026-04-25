@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Daryo - Category Page</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&amp;family=Work+Sans:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "background": "#f8f9fa",
+                        "on-error-container": "#93000a",
+                        "error-container": "#ffdad6",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-container": "#7f3700",
+                        "on-tertiary-fixed-variant": "#763300",
+                        "tertiary-fixed": "#ffdbca",
+                        "surface-bright": "#f8f9fa",
+                        "secondary-fixed-dim": "#b5c7e9",
+                        "inverse-surface": "#2e3132",
+                        "on-primary-container": "#96beff",
+                        "surface": "#f8f9fa",
+                        "error": "#ba1a1a",
+                        "primary": "#003569",
+                        "on-secondary-fixed-variant": "#364763",
+                        "tertiary": "#5c2600",
+                        "on-surface": "#191c1d",
+                        "surface-container-low": "#f3f4f5",
+                        "surface-container-high": "#e7e8e9",
+                        "on-secondary-fixed": "#071c35",
+                        "secondary": "#4e5f7c",
+                        "primary-fixed-dim": "#a7c8ff",
+                        "inverse-on-surface": "#f0f1f2",
+                        "outline": "#727782",
+                        "on-surface-variant": "#424751",
+                        "on-tertiary": "#ffffff",
+                        "surface-container": "#edeeef",
+                        "secondary-container": "#c9dbfd",
+                        "on-primary-fixed": "#001c3b",
+                        "on-primary": "#ffffff",
+                        "tertiary-fixed-dim": "#ffb68e",
+                        "on-tertiary-container": "#ffa877",
+                        "secondary-fixed": "#d5e3ff",
+                        "on-error": "#ffffff",
+                        "on-background": "#191c1d",
+                        "surface-container-highest": "#e1e3e4",
+                        "outline-variant": "#c2c6d2",
+                        "on-primary-fixed-variant": "#004788",
+                        "inverse-primary": "#a7c8ff",
+                        "surface-variant": "#e1e3e4",
+                        "on-secondary-container": "#4e607d",
+                        "on-secondary": "#ffffff",
+                        "primary-fixed": "#d5e3ff",
+                        "surface-dim": "#d9dadb",
+                        "surface-tint": "#255fa5",
+                        "on-tertiary-fixed": "#331200",
+                        "primary-container": "#004c91"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Work Sans"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        .label-font { font-family: 'Work Sans', sans-serif; }
+    </style>
+</head>
+<body class="bg-background text-on-surface">
+<!-- TopNavBar (Shared Component) -->
+<header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl bg-surface-container-low dark:bg-slate-800/50">
+<div class="flex justify-between items-center h-16 px-6 lg:px-12 w-full mx-auto max-w-full">
+<div class="flex items-center space-x-8">
+<span class="text-2xl font-black italic tracking-tighter text-[#004C91] dark:text-white">Daryo</span>
+<nav class="hidden md:flex space-x-6">
+<a class="text-[#004C91] border-b-2 border-[#004C91] pb-1 font-inter tracking-tight font-bold" href="#">Politics</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-on-surface dark:hover:text-white transition-colors font-inter tracking-tight font-bold" href="#">Economy</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-on-surface dark:hover:text-white transition-colors font-inter tracking-tight font-bold" href="#">Society</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-on-surface dark:hover:text-white transition-colors font-inter tracking-tight font-bold" href="#">World</a>
+</nav>
+</div>
+<div class="flex items-center space-x-4">
+<button class="p-2 hover:bg-slate-100/50 dark:hover:bg-slate-800/50 rounded-lg transition-all active:scale-95 text-on-surface">
+<span class="material-symbols-outlined">search</span>
+</button>
+<button class="p-2 hover:bg-slate-100/50 dark:hover:bg-slate-800/50 rounded-lg transition-all active:scale-95 text-on-surface">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</header>
+<main class="pt-24 pb-20 px-6 lg:px-12 max-w-7xl mx-auto">
+<!-- Category Header & Sub-nav -->
+<section class="mb-10">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8">
+<div>
+<span class="label-font text-xs uppercase tracking-widest text-primary font-bold mb-2 block">Category</span>
+<h1 class="text-4xl md:text-5xl font-black text-on-surface tracking-tighter">Politics</h1>
+</div>
+<div class="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-hide">
+<span class="bg-primary-container text-on-primary-container px-4 py-2 rounded-full label-font text-xs font-bold whitespace-nowrap cursor-pointer">Central Asia</span>
+<span class="bg-surface-container-low text-on-surface-variant px-4 py-2 rounded-full label-font text-xs font-bold whitespace-nowrap cursor-pointer hover:bg-surface-container-high transition-colors">International</span>
+<span class="bg-surface-container-low text-on-surface-variant px-4 py-2 rounded-full label-font text-xs font-bold whitespace-nowrap cursor-pointer hover:bg-surface-container-high transition-colors">Analytic</span>
+<span class="bg-surface-container-low text-on-surface-variant px-4 py-2 rounded-full label-font text-xs font-bold whitespace-nowrap cursor-pointer hover:bg-surface-container-high transition-colors">Uzbekistan</span>
+</div>
+</div>
+</section>
+<!-- Main Content Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Hero Article (Asymmetric 1) -->
+<article class="md:col-span-2 group">
+<div class="relative overflow-hidden rounded-xl bg-surface-container-low aspect-[21/9]">
+<img alt="Politics main image" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Modern government building with flags at sunset, dramatic architectural lighting and a sense of institutional power" src="https://lh3.googleusercontent.com/aida-public/AB6AXuChAIa38zEVY4F1EBhpyY0JB03YXarObU_hpXT0zYqUjm2laJfH9y-vCynmzv6dT03Yz3cIltL4PfIDGde8VRVRKrHEj7p6BkKoRL-dPERVQRF4Y01lNWbbBaKV1_wNyCTfeswDCF646q48FvIJew_nQcfujlXUUskFWYZNaiebiQahHOwPJPFOVGhqhZLxPHRiEaqW5CnYZomEQ1wjTwxObSSRQ_l2KPiPaMT-SlD28fag9pEIDXUXpKOjY5KmmST3Aw3Z-kS74pGl"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/90 via-on-surface/20 to-transparent p-8 flex flex-col justify-end">
+<div class="flex items-center gap-3 mb-4">
+<span class="bg-primary px-3 py-1 text-[10px] text-white font-bold uppercase rounded-lg">Breaking</span>
+<span class="text-white/80 label-font text-xs">12:45 • Tashkent</span>
+</div>
+<h2 class="text-white text-3xl md:text-4xl font-extrabold tracking-tight leading-tight max-w-3xl">Strategic partnership agreements signed during official state visit to neighboring capital</h2>
+</div>
+</div>
+</article>
+<!-- 2-Column Grid of Articles -->
+<article class="flex flex-col gap-4 bg-surface-container-lowest p-4 rounded-xl">
+<div class="aspect-video overflow-hidden rounded-lg bg-surface-container">
+<img alt="News article image" class="w-full h-full object-cover" data-alt="Closer shot of high-end business delegates in a meeting room, professional setting with soft daylight and glass office aesthetics" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDeG7YNIqK1WeHwpQ5zo5BxqY8rajwj3T3r46EwHohWSvqXfb0swUUu90B7l-_IUt-kvAN6xLqeXsiYCjiklXDFD3xefMG65X8C5wdR7EFbLhGTpMJe2fHUCHugWluwXzcRR4y8SRq0VdQWZ_idXj1gkc4VplOPgJtW8lQ1vW6h8e56h_ob0IKojPzejab9RCZDfVGbYfBE7L7jzDeHRPkd1W5YMYICzttHgIicr802hU56RnVBUrE2jhCH-Xb_U8EXe-sOxGJ9Xire"/>
+</div>
+<div class="flex flex-col gap-2">
+<span class="label-font text-[10px] font-bold text-primary uppercase tracking-wider">Reform</span>
+<h3 class="text-xl font-bold text-on-surface leading-tight hover:text-primary transition-colors cursor-pointer">New administrative reforms expected to streamline local governance processes</h3>
+<p class="text-on-surface-variant text-sm line-clamp-2">The Cabinet of Ministers has unveiled a comprehensive roadmap aimed at digitizing municipal services across all regions.</p>
+<span class="label-font text-[10px] text-outline mt-2 italic">Updated 2 hours ago</span>
+</div>
+</article>
+<article class="flex flex-col gap-4 bg-surface-container-lowest p-4 rounded-xl">
+<div class="aspect-video overflow-hidden rounded-lg bg-surface-container">
+<img alt="Economic news image" class="w-full h-full object-cover" data-alt="Digital display showing stock market fluctuations and financial data with deep blue and neon green accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBh7bfuH8fuJsZDRz2o3xgGMO_ygzGuhSRCgbqEOt1iLyvbqj2nDQADZaUkb9AGx2upS373MLfEFy91Nc0yrFc2yTG26Gh2Ju_mcx9zRu3cJn1M05cXZW8fhi4s8wYtKndH-rA5LKDYK8nmzcU-jgK3w82d4l7cRKFCGsuOXoaUnTnxW1sCeISbQnhgvZXgw5g5K9Pc7VuItETH46MhG-msxaFiV9hMS3g0KkwGffcjWoWpVtbDGmDBgPLFW3vu_bJvZTJnNJUD4nQW"/>
+</div>
+<div class="flex flex-col gap-2">
+<span class="label-font text-[10px] font-bold text-primary uppercase tracking-wider">Economy</span>
+<h3 class="text-xl font-bold text-on-surface leading-tight hover:text-primary transition-colors cursor-pointer">Economic analysts predict 5.8% GDP growth following trade policy adjustments</h3>
+<p class="text-on-surface-variant text-sm line-clamp-2">Recent data from the Statistics Agency suggests a robust recovery in the manufacturing and export sectors.</p>
+<span class="label-font text-[10px] text-outline mt-2 italic">Updated 3 hours ago</span>
+</div>
+</article>
+<!-- Premium Subscription Banner -->
+<section class="md:col-span-2 my-6">
+<div class="relative overflow-hidden rounded-2xl bg-gradient-to-r from-primary to-primary-container p-10 flex flex-col md:flex-row items-center justify-between gap-8">
+<div class="z-10 text-center md:text-left">
+<h2 class="text-white text-3xl font-black italic mb-2">Daryo Premium</h2>
+<p class="text-on-primary-container font-medium max-w-md">Get exclusive political analysis, ad-free experience, and early access to deep-dive investigative reports.</p>
+<div class="mt-6 flex flex-wrap gap-4 justify-center md:justify-start">
+<button class="bg-white text-primary px-8 py-3 rounded-xl font-bold label-font text-sm hover:bg-surface-container-low transition-all active:scale-95 shadow-lg">Subscribe Now</button>
+<button class="text-white border border-white/30 px-8 py-3 rounded-xl font-bold label-font text-sm hover:bg-white/10 transition-all active:scale-95">Learn More</button>
+</div>
+</div>
+<div class="hidden lg:block relative z-10">
+<div class="w-64 h-64 bg-white/10 backdrop-blur-3xl rounded-full absolute -top-12 -right-12"></div>
+<span class="material-symbols-outlined text-white/20 text-[180px] absolute -top-12 -right-12">auto_awesome</span>
+</div>
+</div>
+</section>
+<!-- Further Content Grid -->
+<article class="flex gap-4 bg-surface-container-low/50 p-4 rounded-xl items-start">
+<div class="w-32 h-32 flex-shrink-0 overflow-hidden rounded-lg">
+<img alt="Regional news" class="w-full h-full object-cover" data-alt="An empty legislative hall with dark wood seating and polished floors, capturing a quiet moment of statehood" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvMIdg1Ek_uDUjUI06YQpV_WRyRS94Abw0yVqqKsJoSOVB2AiZzfxodHjsxMZwu_P5Za6XMIa0AHha63eTtl5PjAqcbHaVAUqhwxMB54m5a6mLqJr7d05bj89bDUoIibLIcTUEo7lPiWKdtvQgN_1FxkY6fGvXFf6NnT-pLoZd-frM0PQAy0IX4CKm4tZC1UiEEfBrUkOKz5eOvOwgaro-7KsKr9jK99n7mFkYYVxDXvZx0XnCDIru_4tP6pBrVRD8oaXWMN_iapJL"/>
+</div>
+<div class="flex flex-col gap-1">
+<span class="label-font text-[10px] font-bold text-primary uppercase tracking-wider">Parliament</span>
+<h3 class="text-base font-bold text-on-surface leading-snug">Legislative chamber debates new environmental protection bill</h3>
+<span class="label-font text-[10px] text-outline mt-1">4 hours ago</span>
+</div>
+</article>
+<article class="flex gap-4 bg-surface-container-low/50 p-4 rounded-xl items-start">
+<div class="w-32 h-32 flex-shrink-0 overflow-hidden rounded-lg">
+<img alt="Diplomatic meeting" class="w-full h-full object-cover" data-alt="Abstract view of world map silhouette on a glass wall with blurred figures passing by, representing global connectivity" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5tTPIXpnm8NGiv2SpX4qPnkyQF6LyFGurUtsO84rqLOxjYcI-4PVobLprayQQAUsDsz8wPt3iBxCYl0C91959vTLNdPQLIkPsAvL_De7k9TEGPhgzPLc0mSk3nWQTBVNPHRpO0vO46qf-E2xbUxh2nv_s3ojd5Bijdr24ChsXXTv3DY-M8p0w_0vzJJBcJYK18NPEqi75CBiDAWLaJoMKc8kEsYtWRcx-cEMEJYStz2qIT9xCZKs77OoOClD9ekCswMW6ssEFHEAc"/>
+</div>
+<div class="flex flex-col gap-1">
+<span class="label-font text-[10px] font-bold text-primary uppercase tracking-wider">Global</span>
+<h3 class="text-base font-bold text-on-surface leading-snug">Regional security summit concludes with joint declaration on stability</h3>
+<span class="label-font text-[10px] text-outline mt-1">5 hours ago</span>
+</div>
+</article>
+<article class="flex gap-4 bg-surface-container-low/50 p-4 rounded-xl items-start">
+<div class="w-32 h-32 flex-shrink-0 overflow-hidden rounded-lg">
+<img alt="Media update" class="w-full h-full object-cover" data-alt="Close-up of newspapers stacked on a wooden table in a brightly lit cafe environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSOpKw6bQsCkSX6E9d8bt6u6Yb6pXA5JJUj1VO1G3ujB_Xlmz__5QxawFy1IGctcU-y1QM9uRsn08brpWmPxmYAM06ZWvIlZKQuMakvjJins5NZ7FzgvyTBHZcnsvMjBtoHbOmHNylgjWRXZwFD_VAmyWhB3OeYIYr1O2qxCoYCmWFY7IOrvlOdh006xrYB3_h7eoFCUTlyPE_yy3FB0nMcQ91iDnLC3-WGoV5gMozkfLVLr_MWonqu3TRzX5JuYLOtc6QOuDitsko"/>
+</div>
+<div class="flex flex-col gap-1">
+<span class="label-font text-[10px] font-bold text-primary uppercase tracking-wider">Media</span>
+<h3 class="text-base font-bold text-on-surface leading-snug">Public broadcasting service announces major content overhaul</h3>
+<span class="label-font text-[10px] text-outline mt-1">6 hours ago</span>
+</div>
+</article>
+<article class="flex gap-4 bg-surface-container-low/50 p-4 rounded-xl items-start">
+<div class="w-32 h-32 flex-shrink-0 overflow-hidden rounded-lg">
+<img alt="Infrastructure news" class="w-full h-full object-cover" data-alt="Architectural blueprint and a yellow hard hat on a desk, representing urban development planning" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzPmpp2kNqOrznszyTSa-2SVv8VGXGIBcDp3Gzj_7ZfGcaaslyNjVrkPj3-6j4DvbMMy9CLAbaodF8CTUZti-G5u2qVibabVGxSRCh_Yfm2iDQzj7dos4EvdyA_BQKihkbw0j6JPhiYyUypE9XJf8ZPGM5asiRF3ZF0fBuCUNH0RYjR2qss24lkPi_fP5iLwB64NhIXf3zsjCW7BFu-Zday6bDpabUdBx-uvAwtwgHW2aHYDpU7-GH6pOjFVifafDbNFpNgiNOS1g9"/>
+</div>
+<div class="flex flex-col gap-1">
+<span class="label-font text-[10px] font-bold text-primary uppercase tracking-wider">Infrastructure</span>
+<h3 class="text-base font-bold text-on-surface leading-snug">New transport corridor to link industrial hubs across the country</h3>
+<span class="label-font text-[10px] text-outline mt-1">7 hours ago</span>
+</div>
+</article>
+</div>
+<!-- Load More Section -->
+<div class="mt-16 flex justify-center">
+<button class="flex items-center gap-2 bg-surface-container-high hover:bg-surface-dim text-on-surface font-bold py-4 px-12 rounded-xl transition-all active:scale-95 group">
+<span class="label-font uppercase text-xs tracking-widest">Load More Stories</span>
+<span class="material-symbols-outlined group-hover:translate-y-1 transition-transform">expand_more</span>
+</button>
+</div>
+</main>
+<!-- BottomNavBar (Shared Component - Responsive) -->
+<footer class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center px-4 py-2 pb-safe bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-800 shadow-[0_-4px_20px_rgba(25,28,29,0.06)] z-50 rounded-t-2xl">
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-6 py-1.5 active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="font-work-sans text-[11px] font-semibold uppercase tracking-wider">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-6 py-1.5 active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined">reorder</span>
+<span class="font-work-sans text-[11px] font-semibold uppercase tracking-wider">Lenta</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-6 py-1.5 active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined">play_circle</span>
+<span class="font-work-sans text-[11px] font-semibold uppercase tracking-wider">Video</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-6 py-1.5 active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined">bookmark</span>
+<span class="font-work-sans text-[11px] font-semibold uppercase tracking-wider">Saved</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-6 py-1.5 active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined">map</span>
+<span class="font-work-sans text-[11px] font-semibold uppercase tracking-wider">Regional</span>
+</a>
+</footer>
+</body></html>

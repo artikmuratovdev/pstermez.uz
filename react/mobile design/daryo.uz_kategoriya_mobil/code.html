@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+
+<html lang="uz"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Daryo - O'zbekiston Yangiliklari</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;family=Work_Sans:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary-fixed": "#071c35",
+                    "surface-bright": "#f8f9fa",
+                    "primary": "#003569",
+                    "secondary": "#4e5f7c",
+                    "primary-container": "#004c91",
+                    "on-primary-fixed": "#001c3b",
+                    "surface-variant": "#e1e3e4",
+                    "on-primary-fixed-variant": "#004788",
+                    "on-error-container": "#93000a",
+                    "outline": "#727782",
+                    "on-secondary-container": "#4e607d",
+                    "on-primary-container": "#96beff",
+                    "inverse-surface": "#2e3132",
+                    "primary-fixed": "#d5e3ff",
+                    "on-surface-variant": "#424751",
+                    "surface-container-highest": "#e1e3e4",
+                    "surface-dim": "#d9dadb",
+                    "surface-container-high": "#e7e8e9",
+                    "on-error": "#ffffff",
+                    "background": "#f8f9fa",
+                    "on-tertiary": "#ffffff",
+                    "surface-container-lowest": "#ffffff",
+                    "error": "#ba1a1a",
+                    "surface-container-low": "#f3f4f5",
+                    "on-tertiary-fixed": "#331200",
+                    "on-secondary-fixed-variant": "#364763",
+                    "secondary-fixed": "#d5e3ff",
+                    "secondary-fixed-dim": "#b5c7e9",
+                    "tertiary": "#5c2600",
+                    "inverse-primary": "#a7c8ff",
+                    "on-surface": "#191c1d",
+                    "on-primary": "#ffffff",
+                    "tertiary-fixed-dim": "#ffb68e",
+                    "secondary-container": "#c9dbfd",
+                    "on-background": "#191c1d",
+                    "tertiary-fixed": "#ffdbca",
+                    "on-secondary": "#ffffff",
+                    "primary-fixed-dim": "#a7c8ff",
+                    "outline-variant": "#c2c6d2",
+                    "inverse-on-surface": "#f0f1f2",
+                    "tertiary-container": "#7f3700",
+                    "surface-container": "#edeeef",
+                    "surface": "#f8f9fa",
+                    "on-tertiary-container": "#ffa877",
+                    "surface-tint": "#255fa5",
+                    "on-tertiary-fixed-variant": "#763300",
+                    "error-container": "#ffdad6"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Inter"],
+                    "body": ["Inter"],
+                    "label": ["Work Sans"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body antialiased">
+<!-- TopAppBar -->
+<header class="bg-white/80 dark:bg-slate-900/80 backdrop-blur-md shadow-sm dark:shadow-none fixed top-0 w-full z-50">
+<div class="flex justify-between items-center px-4 h-14 w-full max-w-screen-xl mx-auto">
+<button class="text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors active:scale-95 duration-200 p-2 rounded-full">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+<div class="text-xl font-black text-[#004C91] dark:text-white uppercase font-headline tracking-tight">Daryo</div>
+<button class="text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors active:scale-95 duration-200 p-2 rounded-full">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</button>
+</div>
+</header>
+<main class="pt-14 pb-20">
+<!-- Category Header & Filters -->
+<section class="bg-surface-container-low px-4 pt-6 pb-4">
+<div class="flex items-center gap-2 mb-4">
+<div class="w-1.5 h-8 bg-primary rounded-full"></div>
+<h1 class="text-2xl font-black font-headline text-on-surface tracking-tight uppercase">O'zbekiston</h1>
+</div>
+<!-- Filter Pills -->
+<div class="flex gap-2 overflow-x-auto no-scrollbar pb-2">
+<button class="flex-none bg-primary-container text-white px-4 py-1.5 rounded-full font-label text-xs font-semibold active:scale-95 duration-200">Barchasi</button>
+<button class="flex-none bg-surface-container-highest text-on-surface-variant px-4 py-1.5 rounded-full font-label text-xs font-semibold active:scale-95 duration-200">Jamiyat</button>
+<button class="flex-none bg-surface-container-highest text-on-surface-variant px-4 py-1.5 rounded-full font-label text-xs font-semibold active:scale-95 duration-200">Siyosat</button>
+<button class="flex-none bg-surface-container-highest text-on-surface-variant px-4 py-1.5 rounded-full font-label text-xs font-semibold active:scale-95 duration-200">Iqtisodiyot</button>
+<button class="flex-none bg-surface-container-highest text-on-surface-variant px-4 py-1.5 rounded-full font-label text-xs font-semibold active:scale-95 duration-200">Mahalliy</button>
+</div>
+</section>
+<!-- Featured News (Asymmetric Bento Lite) -->
+<section class="px-4 mt-4">
+<div class="relative rounded-2xl overflow-hidden aspect-[4/5] bg-surface-container-highest group">
+<img alt="" class="w-full h-full object-cover" data-alt="Modern high-speed train traveling through a sunlit arid landscape with modern infrastructure and blue sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGhCpUkpY7HQR0eVOBDXt6pmM-F7WcxxunfPpdrq1t3f_8FfxUKblE4ipOcPu-crzzvvZHF_qSQJlwlyV-k5lz0ENuOBonpIK_UzY7wYqA1uxPDpgUrSegX8DADsk8EptZFivhEow8qlQUYX1qoL1Z5h3KXpCjz2mc-dQo0K9GAqIJ9zo8E9hdMBhsDHSFinMVYZIoIm8FO_XnZ9zVfksV7HDC37PR_V6d6Xje-0dUr1RwwVsm1LznSUgKLUgIqbW48rr66hiVWMFO"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/90 via-on-surface/20 to-transparent p-6 flex flex-col justify-end">
+<span class="inline-block bg-primary text-white text-[10px] font-bold px-2 py-0.5 rounded mb-3 w-fit uppercase font-label">Asosiy yangilik</span>
+<h2 class="text-white text-xl font-bold font-headline leading-tight mb-2">Toshkent va Samarqand o'rtasida yangi tezyurar poyezd qatnovi yo'lga qo'yiladi</h2>
+<div class="flex items-center gap-3 text-white/70 text-[10px] font-label font-medium">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-xs" data-icon="schedule">schedule</span> 14:30</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-xs" data-icon="visibility">visibility</span> 12.4k</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Vertical News Feed -->
+<section class="mt-6 px-4 space-y-4">
+<!-- News Item 1 -->
+<article class="bg-surface-container-lowest p-4 rounded-2xl flex gap-4 active:scale-[0.98] transition-transform">
+<div class="flex-1">
+<div class="flex items-center gap-2 mb-2">
+<span class="text-primary font-bold text-[10px] uppercase font-label">Jamiyat</span>
+<span class="w-1 h-1 bg-outline-variant rounded-full"></span>
+<span class="text-on-surface-variant text-[10px] font-medium font-label">12:15</span>
+</div>
+<h3 class="text-on-surface font-bold text-sm leading-snug line-clamp-3">O'zbekistonda xususiy bog'chalar uchun beriladigan subsidiya miqdori oshiriladi</h3>
+</div>
+<div class="w-24 h-24 flex-none rounded-xl overflow-hidden bg-surface-container">
+<img alt="" class="w-full h-full object-cover" data-alt="Close-up of children's colorful wooden toys and blocks in a sunlit classroom setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAdW4G6r21KxhRNSf27bpDiVVc6LG6WMD0je8-8FcjTbWZ3KaGmk9v0i6CDEHLYEF5mXgCqR1RljujI_ofl3ZlClJN1ECH6KHJtpLhqwPlOPIzuidJ_o3L88sv0NrKW77yHtTU1Zmo_N1geWeeeawKI3vzX7YhPUwQtMD2HyZb9iCN7dN52W79RtPSqe8nDN2YSZeBoO8XbKIJzoZGiCteKlM0FpOV5hk2aeuzTmMMBqm9iGhl2hQE-KB00cqVGUP5_9JvGFmqSCJs"/>
+</div>
+</article>
+<!-- News Item 2 -->
+<article class="bg-surface-container-lowest p-4 rounded-2xl flex gap-4 active:scale-[0.98] transition-transform">
+<div class="flex-1">
+<div class="flex items-center gap-2 mb-2">
+<span class="text-primary font-bold text-[10px] uppercase font-label">Iqtisodiyot</span>
+<span class="w-1 h-1 bg-outline-variant rounded-full"></span>
+<span class="text-on-surface-variant text-[10px] font-medium font-label">11:45</span>
+</div>
+<h3 class="text-on-surface font-bold text-sm leading-snug line-clamp-3">Markaziy bank valyuta ayirboshlash bo'yicha yangi ko'rsatmalarni e'lon qildi</h3>
+</div>
+<div class="w-24 h-24 flex-none rounded-xl overflow-hidden bg-surface-container">
+<img alt="" class="w-full h-full object-cover" data-alt="Stack of crisp banknotes on a polished wooden desk with soft dramatic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYhgTMrwO485Kgm2yMucSqSToMNGATuleVsCWvliNiw7sGrprvmmRjLYO9Q8CJMCV5Do-UiSmlu2wFyEqN3v70MeR0fN4Ia9pXaXAB3btTzqOL4mepVHSnQUMQA_uBoPXpQvKE66kV-Fo6ETU1cZuNisaVpnyZ-ldByF-LSfRGDdzOBS0htale-99YmyaGbS09_usZFdTxcg4oGUPnmGcgBeihntykuCk48ISFOuGxZLY7YZgkUA7GcCrSrbayD7Ypfir4vZBKwy6X"/>
+</div>
+</article>
+<!-- Premium In-feed CTA (Organic Bento) -->
+<div class="bg-gradient-to-br from-primary to-primary-container p-6 rounded-2xl text-white">
+<div class="flex justify-between items-start mb-4">
+<span class="material-symbols-outlined text-3xl" data-icon="stars" style="font-variation-settings: 'FILL' 1;">stars</span>
+<span class="bg-white/20 px-2 py-1 rounded text-[10px] font-bold uppercase tracking-wider">Daryo Premium</span>
+</div>
+<h4 class="text-lg font-bold font-headline mb-2 leading-tight">Eksklyuziv tahliliy maqolalarni birinchilardan bo'lib o'qing</h4>
+<button class="w-full bg-white text-primary font-bold py-2.5 rounded-xl text-sm active:scale-95 transition-transform mt-2">Obuna bo'lish</button>
+</div>
+<!-- News Item 3 -->
+<article class="bg-surface-container-lowest p-4 rounded-2xl flex gap-4 active:scale-[0.98] transition-transform">
+<div class="flex-1">
+<div class="flex items-center gap-2 mb-2">
+<span class="text-primary font-bold text-[10px] uppercase font-label">Siyosat</span>
+<span class="w-1 h-1 bg-outline-variant rounded-full"></span>
+<span class="text-on-surface-variant text-[10px] font-medium font-label">10:20</span>
+</div>
+<h3 class="text-on-surface font-bold text-sm leading-snug line-clamp-3">O'zbekiston va Qozog'iston o'rtasidagi chegarada yangi o'tish punkti ochiladi</h3>
+</div>
+<div class="w-24 h-24 flex-none rounded-xl overflow-hidden bg-surface-container">
+<img alt="" class="w-full h-full object-cover" data-alt="Conceptual image of two national flags waving against a clear sky near a modern architectural border structure" src="https://lh3.googleusercontent.com/aida-public/AB6AXuApUTCnJeBjyGtg8ojcf8osVTCt-6Stuw0yPLjz-NUqfycrQJgnTYSNIY76IAQTqmjggBtasED7CKGlzCrvnOWgL4C0AfOYcwgOL75zM1U2D-5bsIKzE5SRGEwsmJa979V9nzsGDrHeQl3tqgNuCBy1_UkbiB3FVwFeIQALCQehU5xoErQiYtrTIkXm18-htRfjh5uTM5TH9ujpKfNq4R47l77IZbmnxw8iGcfiOhJWa5sGoCBNHqnsbwgqoCmpDATbqTmu63A1lQag"/>
+</div>
+</article>
+<!-- News Item 4 -->
+<article class="bg-surface-container-lowest p-4 rounded-2xl flex gap-4 active:scale-[0.98] transition-transform">
+<div class="flex-1">
+<div class="flex items-center gap-2 mb-2">
+<span class="text-primary font-bold text-[10px] uppercase font-label">Mahalliy</span>
+<span class="w-1 h-1 bg-outline-variant rounded-full"></span>
+<span class="text-on-surface-variant text-[10px] font-medium font-label">09:55</span>
+</div>
+<h3 class="text-on-surface font-bold text-sm leading-snug line-clamp-3">Toshkent shahar hokimiyati ko'chalarni ko'kalamzorlashtirish loyihasini kengaytirmoqda</h3>
+</div>
+<div class="w-24 h-24 flex-none rounded-xl overflow-hidden bg-surface-container">
+<img alt="" class="w-full h-full object-cover" data-alt="Lush green city park with modern walking paths and young trees integrated into urban architecture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAN1Z7Gm2gVvXU9JvJoZTQYetseNHDvSvSDb9L7NCB5oLTrbP_DFTMui9-HdsY3tqKwGaf4xhGRJ_HEIXw8p1K8wbUeZD72Ncu2mJkys9butSkta_mZ60AIcVwqkhjatcPTDk92h2ylBh6F-y9V5Hm_LX-oEHOwkKPw3sW7LfWWW_i4649LKMXvS1vl8ssi38B-JzuUJqu7BHmP3hFkZMeMKE8AfhF38ihWebeDJgw5efISLwZNl8rsKyPQRJV06ASbCm6Q_gdeBzhJ"/>
+</div>
+</article>
+</section>
+<!-- Load More Button -->
+<div class="px-4 mt-8 mb-12">
+<button class="w-full py-4 border border-outline-variant rounded-2xl text-on-surface-variant font-bold text-sm hover:bg-surface-container-low active:scale-[0.98] transition-all">
+                Ko'proq yuklash
+            </button>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-safe pt-2 bg-white dark:bg-slate-900 shadow-[0_-4px_12px_rgba(0,0,0,0.05)] border-t border-slate-100 dark:border-slate-800 rounded-t-xl z-50">
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-500 p-1.5 transition-transform active:scale-90" href="#">
+<span class="material-symbols-outlined mb-0.5" data-icon="home">home</span>
+<span class="font-['Work_Sans'] text-[10px] uppercase font-semibold">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-[#f3f4f5] dark:bg-slate-800 text-[#004C91] dark:text-white rounded-xl p-1.5 transition-transform active:scale-90" href="#">
+<span class="material-symbols-outlined mb-0.5" data-icon="grid_view" style="font-variation-settings: 'FILL' 1;">grid_view</span>
+<span class="font-['Work_Sans'] text-[10px] uppercase font-semibold">Categories</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-500 p-1.5 transition-transform active:scale-90" href="#">
+<span class="material-symbols-outlined mb-0.5" data-icon="play_circle">play_circle</span>
+<span class="font-['Work_Sans'] text-[10px] uppercase font-semibold">Video</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-500 p-1.5 transition-transform active:scale-90" href="#">
+<span class="material-symbols-outlined mb-0.5" data-icon="stars">stars</span>
+<span class="font-['Work_Sans'] text-[10px] uppercase font-semibold">Premium</span>
+</a>
+</nav>
+<!-- Footer -->
+<footer class="w-full px-6 py-8 flex flex-col items-center gap-4 border-t border-slate-200 dark:border-slate-800 bg-[#edeeef] dark:bg-slate-900 mt-auto pb-24">
+<div class="font-bold text-slate-900 dark:text-white text-lg">Daryo</div>
+<div class="flex flex-wrap justify-center gap-x-6 gap-y-2">
+<a class="text-slate-500 dark:text-slate-400 font-['Work_Sans'] text-xs hover:text-[#004C91] dark:hover:text-white transition-colors opacity-80 hover:opacity-100" href="#">About Us</a>
+<a class="text-slate-500 dark:text-slate-400 font-['Work_Sans'] text-xs hover:text-[#004C91] dark:hover:text-white transition-colors opacity-80 hover:opacity-100" href="#">Contact</a>
+<a class="text-slate-500 dark:text-slate-400 font-['Work_Sans'] text-xs hover:text-[#004C91] dark:hover:text-white transition-colors opacity-80 hover:opacity-100" href="#">Advertising</a>
+<a class="text-slate-500 dark:text-slate-400 font-['Work_Sans'] text-xs hover:text-[#004C91] dark:hover:text-white transition-colors opacity-80 hover:opacity-100" href="#">Privacy Policy</a>
+</div>
+<p class="text-slate-500 dark:text-slate-400 font-['Work_Sans'] text-xs leading-relaxed text-center">© 2024 Daryo.uz. All rights reserved.</p>
+</footer>
+</body></html>

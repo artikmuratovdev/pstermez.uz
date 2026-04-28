@@ -1,16 +1,17 @@
 import React, { useEffect, useRef, useState } from 'react';
-import direktorImg from '../../images/direktor.jpg';
-import safaraliImg from '../../images/Safarali.jpg';
-import sunnatilloImg from '../../images/Sunnatillo.jpg';
-import azizbekImg from '../../images/Azizbek.jpg';
-import safarmurodImg from '../../images/safarmurod_allaqulov_p.JPG';
-import musulmonImg from '../../images/musulmon_qahharov_p.jpg';
-import p03 from '../../images/p03_portrait.jpg';
-import p04 from '../../images/p04_portrait.jpg';
-import p05 from '../../images/p05_portrait.jpg';
-import p06 from '../../images/06.jpg';
-import p07 from '../../images/p07_portrait.JPG';
-import p08 from '../../images/p08_portrait.JPG';
+
+const direktorImg = '/images/direktor.jpg';
+const safaraliImg = '/images/Safarali.jpg';
+const sunnatilloImg = '/images/Sunnatillo.jpg';
+const azizbekImg = '/images/Azizbek.jpg';
+const safarmurodImg = '/images/safarmurod_allaqulov_p.JPG';
+const musulmonImg = '/images/musulmon_qahharov_p.jpg';
+const p03 = '/images/p03_portrait.jpg';
+const p04 = '/images/p04_portrait.jpg';
+const p05 = '/images/p05_portrait.jpg';
+const p06 = '/images/06.jpg'
+const p07 = '/images/p07_portrait.JPG';
+const p08 = '/images/p08_portrait.JPG';
 
 // Scroll Animation Hook
 function useScrollReveal(options = { threshold: 0.1 }) {

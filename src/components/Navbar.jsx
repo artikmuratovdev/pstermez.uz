@@ -121,7 +121,7 @@ export default function Navbar() {
                         <div className="flex items-center gap-4 lg:gap-6">
                             {/* Logo */}
                             <Link to="/" className="flex items-center gap-2.5 pr-2 group" onClick={() => setIsMenuOpen(false)}>
-                                <img src="/images/aa1 logo.png" alt="Logo" className="h-10 md:h-12 w-auto object-contain drop-shadow-sm transition-transform duration-500 group-hover:scale-105" />
+                                <img src="/images/aa1_logo.png" alt="Logo" className="h-10 md:h-12 w-auto object-contain drop-shadow-sm transition-transform duration-500 group-hover:scale-105" />
                                 <div className="flex flex-col justify-center">
                                     <span className="font-['Cinzel',serif] font-bold text-[#004c91] tracking-wider text-[10px] md:text-[12px] leading-tight uppercase transition-colors">
                                         Termiz shahridagi

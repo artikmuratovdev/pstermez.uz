@@ -28,7 +28,7 @@ export default function Article() {
     };
 
     return (
-        <main className="pt-[160px] pb-12 max-w-7xl mx-auto px-6">
+        <main className="pt-40 pb-12 max-w-7xl mx-auto px-6">
             <div className="flex flex-col lg:flex-row gap-8">
                 {/* Main Article Content */}
                 <div className="flex-1 space-y-8 bg-white p-8 rounded-2xl shadow-sm border border-slate-100">

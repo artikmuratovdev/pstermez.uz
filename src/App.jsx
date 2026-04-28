@@ -1,5 +1,4 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 
@@ -10,6 +9,7 @@ import Article from './pages/Article';
 import Videos from './pages/Videos';
 import News from './pages/News';
 import SchoolTeam from './pages/SchoolTeam';
+import { ComingSoon } from './pages/ComingSoon';
 
 function App() {
   return (
@@ -24,6 +24,8 @@ function App() {
             <Route path="/article/:id" element={<Article />} />
             <Route path="/premium" element={<Videos />} />
             <Route path="/maktab-jamoasi" element={<SchoolTeam />} />
+            <Route path="/not-found" element={<ComingSoon />} />
+            <Route path="*" element={<Navigate to={'/not-found'} />} />
           </Routes>
         </div>
         <Footer />

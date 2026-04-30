@@ -8,6 +8,7 @@ import Category from './pages/Category';
 import Article from './pages/Article';
 import Videos from './pages/Videos';
 import News from './pages/News';
+import RecommendationDetail from './pages/RecommendationDetail';
 import SchoolTeam from './pages/SchoolTeam';
 import { ComingSoon } from './pages/ComingSoon';
 
@@ -23,6 +24,7 @@ function App() {
             <Route path="/category" element={<Category />} />
             <Route path="/article/:id" element={<Article />} />
             <Route path="/videos" element={<Videos />} />
+            <Route path="/recommendations/:id" element={<RecommendationDetail />} />
             <Route path="/maktab-jamoasi" element={<SchoolTeam />} />
             <Route path="/not-found" element={<ComingSoon />} />
             <Route path="*" element={<Navigate to={'/not-found'} />} />

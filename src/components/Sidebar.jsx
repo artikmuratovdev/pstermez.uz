@@ -2,44 +2,20 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useGetCategoriesQuery } from '../app/api/categories';
 import { useGetNewsQuery } from '../app/api/news';
-import { toNewsCard } from '../utils/apiFormatters';
-
-const recommendations = [
-    {
-        id: 1,
-        source: 'Grantlar.uz',
-        title: 'Tom Howard Poetry Contest: mukofot - 3500 AQSh dollarigacha!',
-        date: '25 Aprel, 14:15',
-        url: 'https://grantlar.uz/tom-howard-margaret-reid-poetry-contest-tanlovi/',
-    },
-    {
-        id: 2,
-        source: 'Imkoniyat',
-        title: "ESD Okayama Award: Ta'lim bo'yicha mahalliy loyihalar tanlovi",
-        date: '25 Aprel, 12:40',
-        url: 'https://grantlar.uz/esd-okayama-award-tashkilotlar-uchun-talim-boyicha-mahalliy-loyihalar-tanlovi/',
-    },
-    {
-        id: 3,
-        source: 'Stipendiya',
-        title: 'Weinstein Fellowship: AQSHda amaliyot uchun 20 ming dollar!',
-        date: '24 Aprel, 18:20',
-        url: 'https://grantlar.uz/weinstein-jams-international-fellowship/',
-    },
-    {
-        id: 4,
-        source: 'Amaliyot',
-        title: 'Scientific Internships: Avstriyada amaliyot; oylik - 1583 yevro!',
-        date: '24 Aprel, 10:33',
-        url: 'https://grantlar.uz/scientific-internships-bakalavriat-va-magistratura-talabalari-hamda-bitiruvchilari-uchun-avstriyada-amaliyot/',
-    },
-];
+import { useGetRecommendationsQuery } from '../app/api/recommendations';
+import { toNewsCard, toRecommendationCard } from '../utils/apiFormatters';
 
 export default function Sidebar() {
     const { data: newsResponse } = useGetNewsQuery({ page: 1, limit: 3 });
     const { data: categoriesResponse } = useGetCategoriesQuery({ page: 1, limit: 10, type: 'news', isActive: true });
+    const {
+        data: recommendationsResponse,
+        error: recommendationsError,
+        isLoading: recommendationsLoading,
+    } = useGetRecommendationsQuery({ page: 1, limit: 4 });
     const latestNews = newsResponse?.data?.map(toNewsCard) ?? [];
     const categories = categoriesResponse?.data ?? [];
+    const recommendations = recommendationsResponse?.data?.map(toRecommendationCard) ?? [];
 
     return (
         <aside className="w-full lg:w-[320px] shrink-0 space-y-6">
@@ -96,10 +72,22 @@ export default function Sidebar() {
                     Tavsiyalar
                 </h2>
                 <div className="space-y-3">
+                    {recommendationsLoading && (
+                        <div className="rounded-xl bg-[#f4f6fa] p-4 text-[13px] font-bold text-slate-400">
+                            Tavsiyalar yuklanmoqda...
+                        </div>
+                    )}
+
+                    {recommendationsError && (
+                        <div className="rounded-xl bg-red-50 p-4 text-[13px] font-bold text-red-600">
+                            Tavsiyalarni olishda xatolik yuz berdi.
+                        </div>
+                    )}
+
                     {recommendations.map((item) => (
                         <a
                             key={item.id}
-                            href={item.url}
+                            href={item.href}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="block bg-[#f4f6fa] rounded-xl p-4 group hover:bg-[#eaf0f7] transition-colors"
@@ -115,6 +103,12 @@ export default function Sidebar() {
                             </div>
                         </a>
                     ))}
+
+                    {!recommendationsLoading && recommendations.length === 0 && (
+                        <div className="rounded-xl bg-[#f4f6fa] p-4 text-[13px] font-bold text-slate-400">
+                            Tavsiyalar topilmadi.
+                        </div>
+                    )}
                 </div>
             </div>
         </aside>

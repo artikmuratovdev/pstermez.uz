@@ -69,6 +69,16 @@ export const toVideoCard = (item) => ({
   views: item?.views ?? 0,
 })
 
+export const toRecommendationCard = (item) => ({
+  ...item,
+  id: item?._id ?? item?.id,
+  title: item?.title ?? '',
+  href: item?.href ?? '',
+  source: item?.source ?? '',
+  date: formatDate(item?.created_at),
+  created_at: item?.created_at ?? '',
+})
+
 export const contentToHtml = (content = '') => {
   if (content.includes('<')) return content
 

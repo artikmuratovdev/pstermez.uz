@@ -12,11 +12,12 @@ import {
 const rawBaseQuery = fetchBaseQuery({
   baseUrl: import.meta.env.VITE_API_BASE_URL,
   credentials: "include",
-  prepareHeaders: (headers) => {
+  prepareHeaders: (headers, { endpoint }) => {
     headers.set("Accept", "application/json")
 
     const token = getAuthToken()
-    if (token) {
+    const publicEndpoints = ['getRecommendations', 'getRecommendationById']
+    if (token && !publicEndpoints.includes(endpoint)) {
       headers.set("Authorization", `Bearer ${token}`)
     }
 
@@ -64,7 +65,7 @@ const baseQueryWithRefresh = async (args, api, extraOptions) => {
 export const baseApi = createApi({
   reducerPath: 'baseApi',
   baseQuery: baseQueryWithRefresh,
-  tagTypes: ['admin', 'user', 'category', 'news', 'team', 'video'],
+  tagTypes: ['admin', 'user', 'category', 'news', 'team', 'video', 'recommendation'],
   keepUnusedDataFor: 60,
   refetchOnFocus: true,
   refetchOnReconnect: true,

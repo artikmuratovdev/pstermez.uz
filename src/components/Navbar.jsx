@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 export default function Navbar() {
     const [weather, setWeather] = useState({ temp: '--', code: 0, isDay: 1 });
-    const [lang, setLang] = useState('uz');
+    const [lang] = useState('uz');
     const [scrollProgress, setScrollProgress] = useState(0);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -96,12 +96,12 @@ export default function Navbar() {
                                 <span className="text-[#0088cc] font-bold group-hover:text-[#006699] transition-colors">{weather.temp}°C Termiz</span>
                             </div>
                             <div className="flex items-center gap-4">
-                                <img src="/images/hamkor01.bmp" alt="Hamkor" className="h-[18px] w-auto object-contain mix-blend-multiply cursor-pointer hover:scale-105 transition-transform duration-300" />
-                                <img src="/images/hamkor02.bmp" alt="Hamkor" className="h-[18px] w-auto object-contain mix-blend-multiply cursor-pointer hover:scale-105 transition-transform duration-300" />
+                                <img src="/hamkor01.webp" alt="Hamkor" className="h-[18px] w-auto object-contain mix-blend-multiply cursor-pointer hover:scale-105 transition-transform duration-300" />
+                                <img src="/hamkor02.webp" alt="Hamkor" className="h-[18px] w-auto object-contain mix-blend-multiply cursor-pointer hover:scale-105 transition-transform duration-300" />
                             </div>
                         </div>
 
-                        <div className="flex items-center gap-5">
+                        {/* <div className="flex items-center gap-5">
                             <div className="relative group cursor-pointer z-50">
                                 <div className="flex items-center gap-1.5">
                                     <span className="material-symbols-outlined text-[16px] text-slate-400">language</span>
@@ -113,7 +113,7 @@ export default function Navbar() {
                                     <button className="w-full text-left px-4 py-2 hover:bg-[#0088cc]/10 text-[13px] font-medium transition-colors" onClick={() => setLang('en')}>English</button>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
 
                     {/* Main Floating Navbar */}
@@ -121,7 +121,7 @@ export default function Navbar() {
                         <div className="flex items-center gap-4 lg:gap-6">
                             {/* Logo */}
                             <Link to="/" className="flex items-center gap-2.5 pr-2 group" onClick={() => setIsMenuOpen(false)}>
-                                <img src="/images/aa1_logo.png" alt="Logo" className="h-10 md:h-12 w-auto object-contain drop-shadow-sm transition-transform duration-500 group-hover:scale-105" />
+                                <img src="/logo.webp" alt="Logo" className="h-10 md:h-12 w-auto object-contain drop-shadow-sm transition-transform duration-500 group-hover:scale-105" />
                                 <div className="flex flex-col justify-center">
                                     <span className="font-['Cinzel',serif] font-bold text-[#004c91] tracking-wider text-[10px] md:text-[12px] leading-tight uppercase transition-colors">
                                         Termiz shahridagi
@@ -194,6 +194,7 @@ export default function Navbar() {
                                     <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .33z" />
                                 </svg>
                             </a>
+                            
                             <a href="https://www.instagram.com/pmtermiz/" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-lg flex items-center justify-center text-slate-400 hover:bg-[#E4405F] hover:text-white transition-all duration-300">
                                 <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
                                     <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.981 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />

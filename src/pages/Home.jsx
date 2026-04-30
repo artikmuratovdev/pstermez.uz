@@ -1,16 +1,23 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Sidebar from '../components/Sidebar';
-import { newsData } from '../data/newsData';
+import { useGetCategoriesQuery } from '../app/api/categories';
+import { useGetNewsQuery } from '../app/api/news';
+import { toNewsCard } from '../utils/apiFormatters';
 
 export default function Home() {
-    const heroData = newsData.slice(0, 5);
+    const { data, error, isLoading } = useGetNewsQuery({ page: 1, limit: 20 });
+    const { data: categoriesResponse } = useGetCategoriesQuery({ page: 1, limit: 20, type: 'news', isActive: true });
+    const allNews = data?.data?.map(toNewsCard) ?? [];
+    const heroData = allNews.slice(0, 5);
     const [activeTag, setActiveTag] = useState('Hammasi');
-    const tags = ['Hammasi', 'Ma\'naviyat', 'E\'lonlar', 'Tashrif', 'Sport', 'Ilm-fan', 'Olimpiada', 'Pedagoglar', 'Texnologiya'];
+    const categoryTags = categoriesResponse?.data?.map((category) => category.name).filter(Boolean) ?? [];
+    const tags = ['Hammasi', ...categoryTags];
 
     const [heroIdx, setHeroIdx] = useState(0);
 
     useEffect(() => {
+        if (heroData.length === 0) return undefined;
         const timer = setInterval(() => {
             setHeroIdx((prev) => (prev + 1) % heroData.length);
         }, 5000);
@@ -18,8 +25,28 @@ export default function Home() {
     }, [heroData.length]);
 
     const filteredSectionNews = activeTag === 'Hammasi'
-        ? newsData.slice(0, 5)
-        : newsData.filter(item => item.category === activeTag).slice(0, 5);
+        ? allNews.slice(0, 5)
+        : allNews.filter(item => item.category === activeTag).slice(0, 5);
+
+    if (isLoading) {
+        return (
+            <main className="pt-[140px] md:pt-[160px] pb-12 max-w-[1300px] mx-auto px-3 md:px-6">
+                <div className="rounded-xl border border-slate-100 bg-white p-6 text-sm font-bold text-slate-500">
+                    Yangiliklar yuklanmoqda...
+                </div>
+            </main>
+        );
+    }
+
+    if (error || allNews.length === 0) {
+        return (
+            <main className="pt-[140px] md:pt-[160px] pb-12 max-w-[1300px] mx-auto px-3 md:px-6">
+                <div className="rounded-xl border border-slate-100 bg-white p-8 text-center text-sm font-bold text-slate-400">
+                    Hozircha API dan yangilik topilmadi.
+                </div>
+            </main>
+        );
+    }
 
     return (
         <main className="pt-[140px] md:pt-[160px] pb-12 max-w-[1300px] mx-auto px-3 md:px-6">
@@ -79,7 +106,7 @@ export default function Home() {
 
                         {/* Recent News Quick Grid */}
                         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
-                            {newsData.slice(3, 7).map((news) => (
+                            {(allNews.length > 4 ? allNews.slice(4) : allNews).map((news) => (
                                 <Link key={news.id} to={`/article/${news.id}`} className="bg-white rounded-xl shadow-sm border border-slate-100 p-2 group hover:shadow-md transition-shadow">
                                     <div className="aspect-[4/3] rounded-lg overflow-hidden mb-2 md:mb-3 relative">
                                         <img src={news.image} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" alt="news" />

@@ -1,11 +1,15 @@
 import React, { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import Sidebar from '../components/Sidebar';
-import { newsData } from '../data/newsData';
+import { useGetNewsByIdQuery } from '../app/api/news';
+import { contentToHtml, toNewsCard } from '../utils/apiFormatters';
 
 export default function Article() {
     const { id } = useParams();
-    const article = newsData.find(item => item.id === parseInt(id)) || newsData[0];
+    const { data, error, isLoading } = useGetNewsByIdQuery(id, {
+        skip: !id,
+    });
+    const article = data?.data ? toNewsCard(data.data) : null;
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -26,6 +30,26 @@ export default function Article() {
             setCurrentImageIndex((prev) => (prev - 1 + article.images.length) % article.images.length);
         }
     };
+
+    if (isLoading) {
+        return (
+            <main className="pt-40 pb-12 max-w-7xl mx-auto px-6">
+                <div className="rounded-xl border border-slate-100 bg-white p-6 text-sm font-bold text-slate-500">
+                    Maqola yuklanmoqda...
+                </div>
+            </main>
+        );
+    }
+
+    if (error || !article) {
+        return (
+            <main className="pt-40 pb-12 max-w-7xl mx-auto px-6">
+                <div className="rounded-xl border border-red-100 bg-red-50 p-6 text-sm font-bold text-red-600">
+                    Maqola API dan topilmadi.
+                </div>
+            </main>
+        );
+    }
 
     return (
         <main className="pt-40 pb-12 max-w-7xl mx-auto px-6">
@@ -51,7 +75,7 @@ export default function Article() {
                         </div>
                         <div className="flex items-center gap-2">
                             <span className="material-symbols-outlined text-[#0088cc]">visibility</span>
-                            {Math.floor(Math.random() * 500) + 100} marta ko'rildi
+                            {article.views ?? 0} marta ko'rildi
                         </div>
                     </div>
 
@@ -96,10 +120,10 @@ export default function Article() {
 
                     <div
                         className="prose prose-lg max-w-none text-slate-700 leading-relaxed space-y-4"
-                        dangerouslySetInnerHTML={{ __html: article.content }}
+                        dangerouslySetInnerHTML={{ __html: contentToHtml(article.content) }}
                     />
 
-                    <div className="pt-10 border-t border-slate-100 mt-10">
+                    {/* <div className="pt-10 border-t border-slate-100 mt-10">
                         <div className="flex items-center gap-4">
                             <span className="text-sm font-bold text-slate-400">ULASHISH:</span>
                             <div className="flex gap-2">
@@ -111,7 +135,7 @@ export default function Article() {
                                 </button>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
 
                 {/* Sidebar */}

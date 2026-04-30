@@ -1,9 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Sidebar from '../components/Sidebar';
-import { newsData } from '../data/newsData';
+import { useGetNewsQuery } from '../app/api/news';
+import { toNewsCard } from '../utils/apiFormatters';
 
 export default function News() {
+    const { data, error, isLoading } = useGetNewsQuery({ page: 1, limit: 20 });
+    const newsList = data?.data?.map(toNewsCard) ?? [];
+
     return (
         <main className="pt-[160px] pb-12 max-w-7xl mx-auto px-6">
             <div className="flex flex-col lg:flex-row gap-8">
@@ -14,8 +18,20 @@ export default function News() {
                             So'nggi <span className="text-[#0088cc]">yangiliklar</span>
                         </h2>
 
+                        {isLoading && (
+                            <div className="rounded-xl border border-slate-100 bg-white p-6 text-sm font-bold text-slate-500">
+                                Yangiliklar yuklanmoqda...
+                            </div>
+                        )}
+
+                        {error && (
+                            <div className="mb-6 rounded-xl border border-red-100 bg-red-50 p-4 text-sm font-bold text-red-600">
+                                API dan yangilik olishda xatolik yuz berdi.
+                            </div>
+                        )}
+
                         <div className="space-y-10">
-                            {newsData.map((item) => (
+                            {newsList.map((item) => (
                                 <Link key={item.id} to={`/article/${item.id}`} className="flex flex-col md:flex-row gap-6 group border-b border-slate-100 pb-8 last:border-0">
                                     <div className="w-full md:w-64 h-40 rounded-2xl overflow-hidden bg-slate-100 flex-shrink-0 relative">
                                         <img src={item.image} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt={item.title} />
@@ -37,6 +53,12 @@ export default function News() {
                                 </Link>
                             ))}
                         </div>
+
+                        {!isLoading && newsList.length === 0 && (
+                            <div className="rounded-xl border border-slate-100 bg-white p-8 text-center text-sm font-bold text-slate-400">
+                                Hozircha yangiliklar yo'q.
+                            </div>
+                        )}
                     </section>
                 </div>
 

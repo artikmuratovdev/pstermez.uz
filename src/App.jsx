@@ -22,7 +22,7 @@ function App() {
             <Route path="/news" element={<News />} />
             <Route path="/category" element={<Category />} />
             <Route path="/article/:id" element={<Article />} />
-            <Route path="/premium" element={<Videos />} />
+            <Route path="/videos" element={<Videos />} />
             <Route path="/maktab-jamoasi" element={<SchoolTeam />} />
             <Route path="/not-found" element={<ComingSoon />} />
             <Route path="*" element={<Navigate to={'/not-found'} />} />

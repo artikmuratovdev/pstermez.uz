@@ -14,16 +14,16 @@ export default function Footer() {
                 <div className="space-y-4">
                     <h4 className="font-bold text-slate-900 uppercase tracking-widest text-xs">Bo'limlar</h4>
                     <div className="flex flex-col space-y-2">
-                        <Link className="text-slate-500 hover:underline decoration-2 transition-all text-sm" to="/">Yangiliklar</Link>
-                        <Link className="text-slate-500 hover:underline decoration-2 transition-all text-sm" to="/premium">Videolar</Link>
-                        <Link className="text-slate-500 hover:underline decoration-2 transition-all text-sm" to="/category">Maktab hayoti</Link>
+                        <Link className="text-slate-500 hover:underline decoration-2 transition-all text-sm" to="/news">Yangiliklar</Link>
+                        <Link className="text-slate-500 hover:underline decoration-2 transition-all text-sm" to="/videos">Videolar</Link>
+                        <Link className="text-slate-500 hover:underline decoration-2 transition-all text-sm" to="/school-life">Maktab hayoti</Link>
                     </div>
                 </div>
                 <div className="space-y-4">
                     <h4 className="font-bold text-slate-900 uppercase tracking-widest text-xs">Ma'lumot</h4>
                     <div className="flex flex-col space-y-2">
                         <Link className="text-slate-500 hover:underline decoration-2 transition-all text-sm" to="/aloqa">Bog‘lanish</Link>
-                        <Link className="text-slate-500 hover:underline decoration-2 transition-all text-sm" to="#">Maxfiylik siyosati</Link>
+                        <Link className="text-slate-500 hover:underline decoration-2 transition-all text-sm" to="/privacy-policy">Maxfiylik siyosati</Link>
                     </div>
                 </div>
             </div>

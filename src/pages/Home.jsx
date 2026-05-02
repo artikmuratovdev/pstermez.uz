@@ -106,7 +106,7 @@ export default function Home() {
 
                         {/* Recent News Quick Grid */}
                         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
-                            {(allNews.length > 4 ? allNews.slice(4) : allNews).map((news) => (
+                            {allNews.slice(-4).map((news) => (
                                 <Link key={news.id} to={`/article/${news.id}`} className="bg-white rounded-xl shadow-sm border border-slate-100 p-2 group hover:shadow-md transition-shadow">
                                     <div className="aspect-[4/3] rounded-lg overflow-hidden mb-2 md:mb-3 relative">
                                         <img src={news.image} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" alt="news" />

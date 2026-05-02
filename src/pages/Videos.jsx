@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Sidebar from '../components/Sidebar';
 import { useGetVideosQuery } from '../app/api/videos';
 import { toVideoCard } from '../utils/apiFormatters';
@@ -33,18 +34,31 @@ export default function Videos() {
                         {sortedVideos.map((video) => (
                             <div key={video.id} className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all group border border-slate-100">
                                 <div className="relative aspect-video bg-slate-200">
-                                    {video.thumbnail ? (
-                                        <img src={video.thumbnail} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt={video.title} />
+                                    {video.videoUrl ? (
+                                        <video
+                                            className="h-full w-full object-cover"
+                                            controls
+                                            preload="metadata"
+                                            poster={video.thumbnail || undefined}
+                                        >
+                                            <source src={video.videoUrl} type={video.mimeType || 'video/mp4'} />
+                                        </video>
+                                    ) : video.thumbnail ? (
+                                        <Link to={`/article/${video.id}`} className="block h-full w-full">
+                                            <img src={video.thumbnail} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt={video.title} />
+                                        </Link>
                                     ) : (
-                                        <div className="w-full h-full flex items-center justify-center text-slate-400">
+                                        <Link to={`/article/${video.id}`} className="w-full h-full flex items-center justify-center text-slate-400">
                                             <span className="material-symbols-outlined text-5xl">play_circle</span>
-                                        </div>
+                                        </Link>
                                     )}
-                                    <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors flex items-center justify-center">
+                                    {!video.videoUrl && (
+                                        <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors flex items-center justify-center">
                                         <div className="w-16 h-16 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity scale-90 group-hover:scale-100">
                                             <span className="material-symbols-outlined text-white text-4xl filled">play_arrow</span>
                                         </div>
-                                    </div>
+                                        </div>
+                                    )}
                                     {video.duration && (
                                         <div className="absolute bottom-3 right-3 px-2 py-1 bg-black/70 text-white text-[11px] font-bold rounded">
                                             {video.duration}
@@ -52,9 +66,14 @@ export default function Videos() {
                                     )}
                                 </div>
                                 <div className="p-5 space-y-3">
-                                    <h3 className="font-bold text-lg text-slate-800 line-clamp-2 group-hover:text-[#0088cc] transition-colors leading-snug">
+                                    <Link to={`/article/${video.id}`} className="block font-bold text-lg text-slate-800 line-clamp-2 group-hover:text-[#0088cc] transition-colors leading-snug">
                                         {video.title}
-                                    </h3>
+                                    </Link>
+                                    {video.description && (
+                                        <p className="line-clamp-2 text-sm leading-6 text-slate-500">
+                                            {video.description}
+                                        </p>
+                                    )}
                                     <div className="flex items-center justify-between text-[11px] text-slate-400 font-bold uppercase tracking-wider">
                                         <span className="flex items-center gap-1">
                                             <span className="material-symbols-outlined text-[16px]">calendar_today</span>

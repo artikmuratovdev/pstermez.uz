@@ -79,7 +79,18 @@ export default function Article() {
                         </div>
                     </div>
 
-                    {article.images && article.images.length > 0 ? (
+                    {article.videoUrl ? (
+                        <div className="relative aspect-video w-full overflow-hidden rounded-2xl bg-slate-900 shadow-lg">
+                            <video
+                                className="h-full w-full object-contain"
+                                controls
+                                preload="metadata"
+                                poster={article.videoThumbnail || undefined}
+                            >
+                                <source src={article.videoUrl} type={article.mimeType || 'video/mp4'} />
+                            </video>
+                        </div>
+                    ) : article.images && article.images.length > 0 ? (
                         <div className="relative aspect-video w-full rounded-2xl overflow-hidden shadow-lg group">
                             <img
                                 src={article.images[currentImageIndex]}

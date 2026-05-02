@@ -5,10 +5,16 @@ export const getCategoryName = (category) => {
 
 export const getPrimaryImage = (item) => {
   return item?.media?.find((media) => media.type === 'image')?.url
+    ?? item?.media?.find((media) => media.thumbnail)?.thumbnail
     ?? item?.image
     ?? item?.thumbnail
     ?? item?.avatar
     ?? ''
+}
+
+export const getPrimaryVideo = (item) => {
+  return item?.media?.find((media) => media.type === 'video' && media.url)
+    ?? null
 }
 
 export const getImages = (item) => {
@@ -53,6 +59,10 @@ export const toNewsCard = (item) => ({
   category: getCategoryName(item?.category),
   image: getPrimaryImage(item),
   images: getImages(item),
+  video: getPrimaryVideo(item),
+  videoUrl: getPrimaryVideo(item)?.url ?? item?.videoUrl ?? item?.url ?? '',
+  videoThumbnail: getPrimaryVideo(item)?.thumbnail ?? getPrimaryImage(item),
+  mimeType: getPrimaryVideo(item)?.mimeType ?? '',
   desc: item?.description ?? item?.desc ?? '',
   content: item?.content ?? '',
   views: item?.views ?? 0,
@@ -66,6 +76,11 @@ export const toVideoCard = (item) => ({
   rawDate: item?.created_at ?? item?.date,
   duration: item?.duration ?? '',
   thumbnail: getPrimaryImage(item),
+  video: getPrimaryVideo(item),
+  videoUrl: getPrimaryVideo(item)?.url ?? item?.videoUrl ?? item?.url ?? '',
+  mimeType: getPrimaryVideo(item)?.mimeType ?? '',
+  category: getCategoryName(item?.category),
+  description: item?.description ?? '',
   views: item?.views ?? 0,
 })
 
